@@ -5,9 +5,9 @@
 
     .title{
         width: 90%;
+        height: 90vh;
         @include flex(column wrap, center, center);
         @include marginAuto;
-        @include padding-y(15rem);
         text-align: center;
         font-size: 2rem;
 
