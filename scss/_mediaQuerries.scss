@@ -49,6 +49,7 @@
                 width: 90%;
             }
             .undername{
+                @include weight(normal);
                 @include flex(column wrap, center, center);
             }
         }
@@ -93,6 +94,16 @@
                     font-size: 1rem;
                 }
             }
+        }
+    }
+}
+@media only screen and (max-width:600px){
+    .container .title{
+        .name{
+            font-size: 2rem;
+        }
+        .undername h2{
+            font-size: 0.8rem;
         }
     }
 }
