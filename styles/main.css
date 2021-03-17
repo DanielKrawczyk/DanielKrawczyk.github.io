@@ -140,8 +140,8 @@ body {
   position: fixed;
   visibility: hidden;
   z-index: 1;
-  right: 1rem;
-  top: 1rem;
+  right: 2rem;
+  top: 2rem;
   height: 20px;
   width: 28px;
   -webkit-transition: all 0.7s ease-in-out;
@@ -389,6 +389,11 @@ body {
   height: 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+.container #about-me .content-box .text-more_txt a:hover {
+  cursor: url("../link.cur"), default;
+  color: #ff6400;
 }
 
 .container #about-me .content-box .text-more_txt.active {
@@ -745,10 +750,10 @@ footer {
 
 @media only screen and (max-width: 600px) {
   .container .title .name {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .container .title .undername h2 {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 }
 
