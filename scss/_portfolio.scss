@@ -1,0 +1,77 @@
+.container{
+    #portfolio{
+        width: 100%;
+        background: linear-gradient(to right, rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.6)), url('../images/portfolio-bg.jpg') top center;
+        background-repeat: repeat;
+        padding-bottom: 10rem;
+        padding-top: 3rem;
+
+        .content{
+
+            .list{
+                width: 90%;
+                @include flex(column wrap, center, center);
+                @include marginAuto;
+    
+                &-item{
+                    @include padding-y(1rem);
+                    @include flex(column wrap, center, center);
+                    opacity: 0.5;
+                    overflow: hidden;
+                    @include transition(0.4s);
+
+                    &_photo {
+                        width: 80%;
+                        text-align: center;
+                        font-size: 0.8rem;
+                        padding-bottom: 1rem;
+                        border-bottom: 2px solid $secondary;
+                        &_x{
+                            width: 30%;
+                        }
+
+                        & img{
+                            border: 1px solid #000;
+                            border-radius: 1rem;
+                        }
+                    }
+
+                    &_desc{
+                        width: 80%;
+                        overflow: hidden;
+                        height: 0;
+
+                        & p{
+                            padding: 0.5rem;
+                            transform: translateY(-100%);
+                            @include transition(0.3s);
+                            background-color: rgba(20, 20, 20, 0.9);
+                        }
+                    }
+
+                    &:hover{
+                        @include pointer;
+                        opacity: 0.8;
+                    }
+
+                    &.active{
+                        opacity: 1;
+                        .list-item_desc{
+                            height: fit-content;
+                        }
+                        &.show{
+                            .list-item_desc p{
+                                transform: translateY(0%);
+    
+                            }
+                        }
+                        &:hover{
+                            @include pointer;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

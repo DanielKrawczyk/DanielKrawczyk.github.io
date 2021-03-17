@@ -1,0 +1,41 @@
+$primary: rgb(20, 20, 20);
+$secondary: rgb(255, 100, 0);
+$font: rgb(255, 255, 255);
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: url('../cursor.cur'), default;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+@mixin marginAuto{
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin flex($flow, $justify, $align){
+    display: flex;
+    flex-flow: $flow;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin pointer{
+    cursor: url('../link.cur'), default;
+}
+@mixin transition($s){
+    transition: all $s ease-in-out;
+}
+@mixin weight($val){
+    font-weight: $val;
+}
+@mixin padding-y($y){
+    padding-top: $y;
+    padding-bottom: $y;
+}
+@mixin padding-x($x){
+    padding-left: $x;
+    padding-right: $x;
+}

@@ -1,0 +1,27 @@
+.container{
+    #skills{
+        width: 100%;
+        background: $primary;
+        @include marginAuto;
+        padding: 4rem;
+        border-bottom: 1px solid $secondary;
+        border-top: 1px solid $secondary;
+        box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
+
+        .content{
+
+            .list{
+                @include flex(column wrap, center, center);
+                text-align: center;
+
+                &-item{
+                    @include padding-y(4rem);
+
+                    &_desc{
+                        @include weight(bold);
+                    }
+                }
+            }
+        }
+    }
+}
