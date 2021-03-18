@@ -4,7 +4,6 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: url("../cursor.cur"), default;
 }
 
 html {
@@ -83,7 +82,7 @@ body {
 }
 
 .button:hover {
-  cursor: url("../link.cur"), default;
+  cursor: pointer;
   background: #ff6400;
   color: white;
 }
@@ -149,7 +148,7 @@ body {
 }
 
 .nav-button:hover {
-  cursor: url("../link.cur"), default;
+  cursor: pointer;
   color: #ff6400;
 }
 
@@ -232,7 +231,8 @@ body {
 }
 
 .nav-bar_item a:hover {
-  cursor: url("../link.cur"), default;
+  cursor: pointer;
+  color: #ff6400;
   color: #ff6400;
 }
 
@@ -325,8 +325,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 4rem;
-  border-bottom: 1px solid #ff6400;
   border-top: 1px solid #ff6400;
+  border-bottom: 1px solid #ff6400;
   -webkit-box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
           box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
 }
@@ -349,7 +349,6 @@ body {
 }
 
 .container #about-me .content-box .photo img {
-  border: 1px solid #ff6400;
   border-radius: 60px;
   width: 800px;
   height: 500px;
@@ -392,7 +391,7 @@ body {
 }
 
 .container #about-me .content-box .text-more_txt a:hover {
-  cursor: url("../link.cur"), default;
+  cursor: pointer;
   color: #ff6400;
 }
 
@@ -492,7 +491,7 @@ body {
 }
 
 .container #portfolio .content .list-item:hover {
-  cursor: url("../link.cur"), default;
+  cursor: pointer;
   opacity: 0.8;
 }
 
@@ -512,7 +511,7 @@ body {
 }
 
 .container #portfolio .content .list-item.active:hover {
-  cursor: url("../link.cur"), default;
+  cursor: pointer;
   opacity: 0.8;
 }
 
@@ -522,8 +521,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 4rem;
-  border-bottom: 1px solid #ff6400;
   border-top: 1px solid #ff6400;
+  border-bottom: 1px solid #ff6400;
   -webkit-box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
           box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
 }
@@ -583,8 +582,8 @@ body {
 }
 
 .container #contact .list-item h2 a:hover, .container #contact .list-item h1 a:hover {
+  cursor: pointer;
   color: #ff6400;
-  cursor: url("../link.cur"), default;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }

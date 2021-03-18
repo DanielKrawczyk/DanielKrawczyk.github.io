@@ -13,7 +13,6 @@
             &-item{
 
                 h2 a:hover, h1 a:hover{
-                    color: $secondary;
                     @include pointer;
                     @include transition(0.3s);
                 }

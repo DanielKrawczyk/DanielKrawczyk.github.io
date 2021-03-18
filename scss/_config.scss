@@ -6,7 +6,6 @@ $font: rgb(255, 255, 255);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    cursor: url('../cursor.cur'), default;
 }
 html {
     scroll-behavior: smooth;
@@ -23,7 +22,8 @@ html {
     align-items: $align;
 }
 @mixin pointer{
-    cursor: url('../link.cur'), default;
+    cursor: pointer;
+    color: $secondary;
 }
 @mixin transition($s){
     transition: all $s ease-in-out;
@@ -38,4 +38,8 @@ html {
 @mixin padding-x($x){
     padding-left: $x;
     padding-right: $x;
+}
+@mixin box-border{
+    border-top: 1px solid $secondary;
+    border-bottom: 1px solid $secondary;
 }

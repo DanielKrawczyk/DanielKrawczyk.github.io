@@ -4,8 +4,7 @@
         background: $primary;
         @include marginAuto;
         padding: 4rem;
-        border-bottom: 1px solid $secondary;
-        border-top: 1px solid $secondary;
+        @include box-border;
         box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
 
         .content-box{
@@ -13,7 +12,6 @@
             margin-top: 2rem;
 
             .photo img{
-                border: 1px solid $secondary;
                 border-radius: 60px;
                 width: 800px;
                 height: 500px;
@@ -37,7 +35,6 @@
 
                         & a:hover{
                             @include pointer;
-                            color: $secondary;
                         }
 
                         &.active{

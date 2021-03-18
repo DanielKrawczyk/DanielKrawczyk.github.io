@@ -27,7 +27,7 @@ body {
     @include transition(0.3s);
 
     &:hover{
-        @include pointer;
+        cursor: pointer;
         background: $secondary;
         color: $font;
     }
