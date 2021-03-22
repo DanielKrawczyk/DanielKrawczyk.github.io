@@ -1,17 +1,19 @@
 .container{
+
     #skills{
         width: 100%;
-        background: $primary;
-        @include marginAuto;
         padding: 4rem;
-        @include box-border;
+        background: $primary;
         box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
+        user-select: none;
+        @include marginAuto;
+        @include box-border;
 
         .content{
 
             .list{
-                @include flex(column wrap, center, center);
                 text-align: center;
+                @include flex(column wrap, center, center);
 
                 &-item{
                     @include padding-y(4rem);

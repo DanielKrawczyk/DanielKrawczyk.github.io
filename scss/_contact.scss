@@ -1,26 +1,27 @@
-.container{
-    #contact{
-        background: linear-gradient(to left, rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.9)), url('../images/contact-bg.jpg') right;
-        background-repeat: no-repeat;
+.container {
+    
+    #contact {
         text-align: center;
+        background: linear-gradient(to left, rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.9)), url('../images/contact-bg.jpg') right center;
+        background-repeat: no-repeat;
         @include padding-y(5rem);
         
-        .list{
+        .list {
             width: 60%;
             @include marginAuto;
             @include flex(column wrap, center, center);
 
-            &-item{
+            &-item {
 
-                h2 a:hover, h1 a:hover{
+                h2 a:hover, h1 a:hover {
                     @include pointer;
                     @include transition(0.3s);
                 }
 
-                &.icons{
+                &.icons {
                     @include flex(row, space-evenly, inherit);
 
-                    h1{
+                    h1 {
                         @include padding-x(2rem);
                     }
                 }

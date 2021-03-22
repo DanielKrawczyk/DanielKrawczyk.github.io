@@ -10,7 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
-@-webkit-keyframes see-more {
+@-webkit-keyframes arrow-animation {
   0% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
@@ -25,7 +25,7 @@ html {
   }
 }
 
-@keyframes see-more {
+@keyframes arrow-animation {
   0% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
@@ -63,28 +63,31 @@ html {
 }
 
 body {
-  background-color: #141414;
   color: white;
   font-family: 'Open Sans', sans-serif;
-  background-repeat: no-repeat;
+  background-color: #141414;
 }
 
 .button {
+  color: #ff6400;
   margin: 1.5rem;
   padding: 1rem;
+  background: #141414;
   border: 1px solid #ff6400;
   border-radius: 4rem;
-  background: #141414;
-  color: #ff6400;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-weight: bold;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .button:hover {
-  cursor: pointer;
-  background: #ff6400;
   color: white;
+  background: #ff6400;
+  cursor: pointer;
 }
 
 .colored, .symbol {
@@ -97,11 +100,15 @@ body {
 }
 
 .content h1 {
+  color: #ff6400;
+  font-size: 5rem;
   text-align: center;
   text-shadow: 2px 2px 2px #000;
-  font-size: 5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-weight: bold;
-  color: #ff6400;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -131,18 +138,22 @@ body {
   width: 100%;
   position: fixed;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
 }
 
 .nav-button {
+  width: 28px;
+  height: 20px;
+  top: 2rem;
+  right: 2rem;
   position: fixed;
   visibility: hidden;
   z-index: 1;
-  right: 2rem;
-  top: 2rem;
-  height: 20px;
-  width: 28px;
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
 }
@@ -153,10 +164,10 @@ body {
 }
 
 .nav-button_burger {
-  right: 20px;
-  top: 20px;
   width: 28px;
   height: 3px;
+  top: 20px;
+  right: 20px;
   background: #fff;
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
@@ -164,10 +175,10 @@ body {
 
 .nav-button_burger::before {
   content: '';
-  position: absolute;
-  top: -8px;
   width: 28px;
   height: 3px;
+  top: -8px;
+  position: absolute;
   background: #fff;
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
@@ -175,10 +186,10 @@ body {
 
 .nav-button_burger::after {
   content: '';
-  position: absolute;
-  top: 8px;
   width: 20px;
   height: 3px;
+  top: 8px;
+  position: absolute;
   background: #fff;
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
@@ -202,6 +213,7 @@ body {
 }
 
 .nav-bar {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,7 +227,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
 }
 
 .nav-bar_item {
@@ -232,7 +243,6 @@ body {
 
 .nav-bar_item a:hover {
   cursor: pointer;
-  color: #ff6400;
   color: #ff6400;
 }
 
@@ -255,6 +265,12 @@ body {
 .container .title {
   width: 90%;
   height: 85vh;
+  font-size: 2rem;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,21 +286,19 @@ body {
           align-items: center;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  font-size: 2rem;
 }
 
 .container .title .name {
   width: 85%;
+  border-bottom: 1px solid white;
   font-weight: 500;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid white;
 }
 
 .container .title .surname {
-  font-weight: 700;
   color: #ff6400;
+  font-weight: 700;
 }
 
 .container .title .undername {
@@ -312,8 +326,8 @@ body {
 .container .see-more {
   margin: 2rem;
   text-align: center;
-  -webkit-animation-name: see-more;
-          animation-name: see-more;
+  -webkit-animation-name: arrow-animation;
+          animation-name: arrow-animation;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
@@ -322,17 +336,18 @@ body {
 
 .container #about-me {
   width: 100%;
-  background: #141414;
-  margin-left: auto;
-  margin-right: auto;
   padding: 4rem;
-  border-top: 1px solid #ff6400;
-  border-bottom: 1px solid #ff6400;
+  background: #141414;
   -webkit-box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
           box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #ff6400;
+  border-bottom: 1px solid #ff6400;
 }
 
 .container #about-me .content-box {
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,16 +361,20 @@ body {
   -webkit-box-align: inherit;
       -ms-flex-align: inherit;
           align-items: inherit;
-  margin-top: 2rem;
 }
 
 .container #about-me .content-box .photo img {
-  border-radius: 60px;
   width: 800px;
   height: 500px;
+  border-radius: 60px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .container #about-me .content-box .text {
+  margin-left: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,7 +388,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 2rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -384,9 +402,9 @@ body {
 }
 
 .container #about-me .content-box .text-more_txt {
+  height: 0;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  height: 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -413,6 +431,10 @@ body {
   width: 100%;
   padding-bottom: 10rem;
   padding-top: 3rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .container #portfolio .content .list {
@@ -435,6 +457,8 @@ body {
 }
 
 .container #portfolio .content .list-item {
+  opacity: 0.5;
+  overflow: hidden;
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: -webkit-box;
@@ -450,16 +474,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  opacity: 0.5;
-  overflow: hidden;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
 .container #portfolio .content .list-item_photo {
   width: 80%;
-  text-align: center;
   font-size: 0.8rem;
+  text-align: center;
   padding-bottom: 1rem;
   border-bottom: 2px solid #ff6400;
 }
@@ -475,22 +497,22 @@ body {
 
 .container #portfolio .content .list-item_desc {
   width: 80%;
-  overflow: hidden;
   height: 0;
+  overflow: hidden;
 }
 
 .container #portfolio .content .list-item_desc p {
   padding: 0.5rem;
+  background-color: rgba(20, 20, 20, 0.9);
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: rgba(20, 20, 20, 0.9);
 }
 
 .container #portfolio .content .list-item:hover {
-  cursor: pointer;
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .container #portfolio .content .list-item.active {
@@ -509,23 +531,28 @@ body {
 }
 
 .container #portfolio .content .list-item.active:hover {
-  cursor: pointer;
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .container #skills {
   width: 100%;
-  background: #141414;
-  margin-left: auto;
-  margin-right: auto;
   padding: 4rem;
-  border-top: 1px solid #ff6400;
-  border-bottom: 1px solid #ff6400;
+  background: #141414;
   -webkit-box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
           box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #ff6400;
+  border-bottom: 1px solid #ff6400;
 }
 
 .container #skills .content .list {
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -539,7 +566,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
 }
 
 .container #skills .content .list-item {
@@ -552,10 +578,10 @@ body {
 }
 
 .container #contact {
-  background: -webkit-gradient(linear, right top, left top, from(rgba(40, 40, 40, 0.5)), to(rgba(40, 40, 40, 0.9))), url("../images/contact-bg.jpg") right;
-  background: linear-gradient(to left, rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.9)), url("../images/contact-bg.jpg") right;
-  background-repeat: no-repeat;
   text-align: center;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(40, 40, 40, 0.5)), to(rgba(40, 40, 40, 0.9))), url("../images/contact-bg.jpg") right center;
+  background: linear-gradient(to left, rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.9)), url("../images/contact-bg.jpg") right center;
+  background-repeat: no-repeat;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -608,10 +634,14 @@ body {
 }
 
 footer {
-  text-align: center;
-  border-top: 1px solid #ff6400;
-  padding: 1rem;
   font-size: 0.8rem;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #ff6400;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -633,11 +663,13 @@ footer {
     visibility: visible;
   }
   .nav-bar {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
     width: 100vw;
     height: 100vh;
+    position: absolute;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    margin-left: auto;
+    margin-right: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -651,13 +683,10 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
   .nav-bar_item {
-    display: inline;
     font-size: 1.5rem;
   }
   .nav-bar.active {

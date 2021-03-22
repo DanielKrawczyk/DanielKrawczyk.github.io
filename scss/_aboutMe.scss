@@ -1,46 +1,50 @@
-.container{
-    #about-me{
+.container {
+
+    #about-me {
         width: 100%;
-        background: $primary;
-        @include marginAuto;
         padding: 4rem;
-        @include box-border;
+        background: $primary;
         box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
+        @include marginAuto;
+        @include box-border;
 
-        .content-box{
-            @include flex(row nowrap, space-between, inherit);
+        .content-box {
             margin-top: 2rem;
+            @include flex(row nowrap, space-between, inherit);
 
-            .photo img{
-                border-radius: 60px;
+            .photo img {
                 width: 800px;
                 height: 500px;
+                border-radius: 60px;
+                user-select: none;
             }
-            .text{
-                @include flex(column wrap, flex-start, center);
+
+            .text {
                 margin-left: 2rem;
+                @include flex(column wrap, flex-start, center);
                 @include transition(0.3s);
 
-                &-primary{
+                &-primary {
                     padding-bottom: 1rem;
                     border-bottom: 2px solid $secondary;
                 }
-                &-more{
+
+                &-more {
                     overflow: hidden;
 
-                    &_txt{
-                        transform: translateY(-100%);
+                    &_txt {
                         height: 0;
+                        transform: translateY(-100%);
                         @include transition(0.5s);
 
-                        & a:hover{
+                        & a:hover {
                             @include pointer;
                         }
 
-                        &.active{
+                        &.active {
                             height: fit-content;
 
-                            &.show{
+                            &.show {
                                 transform: translateY(0);
                                 @include padding-y(0.5rem);
                             }
