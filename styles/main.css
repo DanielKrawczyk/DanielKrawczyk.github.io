@@ -249,11 +249,12 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(rgba(20, 20, 20, 0.9)), to(rgba(20, 20, 20, 0.6))), url("../images/main-bg.jpg") top center;
   background: linear-gradient(to right, rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.6)), url("../images/main-bg.jpg") top center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .container .title {
   width: 90%;
-  height: 90vh;
+  height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,7 +310,7 @@ body {
 }
 
 .container .see-more {
-  margin: 1rem;
+  margin: 2rem;
   text-align: center;
   -webkit-animation-name: see-more;
           animation-name: see-more;
@@ -410,9 +411,6 @@ body {
 
 .container #portfolio {
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(20, 20, 20, 0.9)), to(rgba(20, 20, 20, 0.6))), url("../images/portfolio-bg.jpg") top center;
-  background: linear-gradient(to right, rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.6)), url("../images/portfolio-bg.jpg") top center;
-  background-repeat: repeat;
   padding-bottom: 10rem;
   padding-top: 3rem;
 }
