@@ -766,6 +766,9 @@ footer {
         -ms-flex-align: center;
             align-items: center;
   }
+  .container #contact {
+    background-size: cover;
+  }
   .container #contact .list {
     width: 100%;
   }
