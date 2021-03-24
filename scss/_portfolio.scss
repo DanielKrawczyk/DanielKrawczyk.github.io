@@ -34,6 +34,11 @@
                         & img {
                             border: 1px solid #000;
                             border-radius: 1rem;
+
+                            &:hover  {
+                                opacity: 0.8;
+                                cursor: pointer;
+                            }
                         }
                     }
 
@@ -42,17 +47,32 @@
                         height: 0;
                         overflow: hidden;
 
+                        &:hover {
+                            cursor: default;
+                        }
+
                         & p {
                             padding: 0.5rem;
                             background-color: rgba(20, 20, 20, 0.9);
                             transform: translateY(-100%);
                             @include transition(0.3s);
                         }
-                    }
 
-                    &:hover  {
-                        opacity: 0.8;
-                        cursor: pointer;
+                        & .link-buttons {
+                            text-align: center;
+                            transform: translateY(-1000%);
+                            @include transition(0.3s);
+                            @include flex(row, center, center);
+
+                            a {
+                                padding: 1rem;
+                                @include transition(0.3s);
+
+                                &:hover {
+                                    @include pointer;
+                                }
+                            }
+                        }
                     }
 
                     &.active {
@@ -66,13 +86,10 @@
 
                             .list-item_desc p {
                                 transform: translateY(0%);
-    
                             }
-                        }
-
-                        &:hover {
-                            opacity: 0.8;
-                            cursor: pointer;
+                            .list-item_desc .link-buttons {
+                                transform: translateY(0%);
+                            }
                         }
                     }
                 }

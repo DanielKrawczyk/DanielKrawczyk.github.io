@@ -495,10 +495,19 @@ body {
   border-radius: 1rem;
 }
 
+.container #portfolio .content .list-item_photo img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .container #portfolio .content .list-item_desc {
   width: 80%;
   height: 0;
   overflow: hidden;
+}
+
+.container #portfolio .content .list-item_desc:hover {
+  cursor: default;
 }
 
 .container #portfolio .content .list-item_desc p {
@@ -510,9 +519,36 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.container #portfolio .content .list-item:hover {
-  opacity: 0.8;
+.container #portfolio .content .list-item_desc .link-buttons {
+  text-align: center;
+  -webkit-transform: translateY(-1000%);
+          transform: translateY(-1000%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container #portfolio .content .list-item_desc .link-buttons a {
+  padding: 1rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.container #portfolio .content .list-item_desc .link-buttons a:hover {
   cursor: pointer;
+  color: #ff6400;
 }
 
 .container #portfolio .content .list-item.active {
@@ -530,9 +566,9 @@ body {
           transform: translateY(0%);
 }
 
-.container #portfolio .content .list-item.active:hover {
-  opacity: 0.8;
-  cursor: pointer;
+.container #portfolio .content .list-item.active.show .list-item_desc .link-buttons {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .container #skills {
