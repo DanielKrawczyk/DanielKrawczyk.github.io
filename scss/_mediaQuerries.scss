@@ -1,11 +1,9 @@
 @media only screen and(max-width:1023px) {
     .img {
-        width: 200px;
-        height: 200px;
+        width: 70%;
     }
-    .img-3d1 {
-        width: 200px;
-        height: 75px;
+    .img-big {
+        width: 30%;
     }
     .content {
 
@@ -59,10 +57,12 @@
             padding: 0.5rem;
             .content-box {
                 @include flex(column wrap, center, center);
-                & .photo img {
-                    border-radius: 20px;
-                    width: 300px;
-                    height: 200px;
+                & .photo {
+                    text-align: center;
+                    img {
+                        max-width: 90%;
+                        height: auto;
+                    }
                 }
                 .text {
                     margin: 0.5rem;
@@ -116,10 +116,12 @@
             padding: 0.5rem;
             .content-box {
                 @include flex(column wrap, center, center);
-                & .photo img {
-                    border-radius: 20px;
-                    width: 500px;
-                    height: 300px;
+                & .photo {
+                    text-align: center;
+                    img {
+                        max-width: 60%;
+                        height: auto;
+                    }
                 }
                 .text {
                     margin: 0.5rem;

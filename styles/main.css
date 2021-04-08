@@ -125,13 +125,13 @@ body {
 }
 
 .img {
-  width: 300px;
-  height: 300px;
+  width: 30%;
+  height: auto;
 }
 
-.img-3d1 {
-  width: 600px;
-  height: 200px;
+.img-big {
+  width: 10%;
+  height: auto;
 }
 
 .nav {
@@ -336,7 +336,7 @@ body {
 
 .container #about-me {
   width: 100%;
-  padding: 4rem;
+  padding: 2rem;
   background: #141414;
   -webkit-box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
           box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
@@ -364,9 +364,9 @@ body {
 }
 
 .container #about-me .content-box .photo img {
-  width: 800px;
-  height: 500px;
-  border-radius: 60px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -374,6 +374,7 @@ body {
 }
 
 .container #about-me .content-box .text {
+  width: 85%;
   margin-left: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -682,12 +683,10 @@ footer {
 
 @media only screen and (max-width: 1023px) {
   .img {
-    width: 200px;
-    height: 200px;
+    width: 70%;
   }
-  .img-3d1 {
-    width: 200px;
-    height: 75px;
+  .img-big {
+    width: 30%;
   }
   .content h1 {
     font-size: 2rem;
@@ -770,10 +769,12 @@ footer {
         -ms-flex-align: center;
             align-items: center;
   }
+  .container #about-me .content-box .photo {
+    text-align: center;
+  }
   .container #about-me .content-box .photo img {
-    border-radius: 20px;
-    width: 300px;
-    height: 200px;
+    max-width: 90%;
+    height: auto;
   }
   .container #about-me .content-box .text {
     margin: 0.5rem;
@@ -841,10 +842,12 @@ footer {
         -ms-flex-align: center;
             align-items: center;
   }
+  .container #about-me .content-box .photo {
+    text-align: center;
+  }
   .container #about-me .content-box .photo img {
-    border-radius: 20px;
-    width: 500px;
-    height: 300px;
+    max-width: 60%;
+    height: auto;
   }
   .container #about-me .content-box .text {
     margin: 0.5rem;

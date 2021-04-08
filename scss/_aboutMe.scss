@@ -2,7 +2,7 @@
 
     #about-me {
         width: 100%;
-        padding: 4rem;
+        padding: 2rem;
         background: $primary;
         box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
         @include marginAuto;
@@ -13,13 +13,14 @@
             @include flex(row nowrap, space-between, inherit);
 
             .photo img {
-                width: 800px;
-                height: 500px;
-                border-radius: 60px;
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
                 user-select: none;
             }
 
             .text {
+                width: 85%;
                 margin-left: 2rem;
                 @include flex(column wrap, flex-start, center);
                 @include transition(0.3s);
