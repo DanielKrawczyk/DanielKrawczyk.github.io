@@ -1,5 +1,4 @@
 (() => {
-
     let isActive = false;
     document.getElementById('more-button').addEventListener('click', () => {
         const doc = document.querySelector('.text-more_txt');
