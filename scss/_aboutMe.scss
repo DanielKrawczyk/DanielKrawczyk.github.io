@@ -10,18 +10,17 @@
 
         .content-box {
             margin-top: 2rem;
-            @include flex(row nowrap, space-between, inherit);
+            @include flex(row nowrap, space-evenly, none);
 
             .photo img {
-                max-width: 100%;
+                max-width: 80%;
                 height: auto;
                 border-radius: 10px;
                 user-select: none;
             }
 
             .text {
-                width: 85%;
-                margin-left: 2rem;
+                width: 100%;
                 @include flex(column wrap, flex-start, center);
                 @include transition(0.3s);
 

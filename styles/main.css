@@ -73,8 +73,8 @@ body {
   margin: 1.5rem;
   padding: 1rem;
   background: #141414;
-  border: 1px solid #ff6400;
-  border-radius: 4rem;
+  border: 2px solid #ff6400;
+  border-radius: 1rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -132,6 +132,52 @@ body {
 .img-big {
   width: 10%;
   height: auto;
+}
+
+.lang {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  left: 10px;
+  font-size: 0.7rem;
+  padding: 5px;
+  border: 2px solid #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.lang:hover {
+  cursor: pointer;
+  border: 2px solid #ff6400;
+}
+
+.goUp {
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  right: 10px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 2px solid #ff6400;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.goUp:hover {
+  cursor: pointer;
+  opacity: 1;
+  background-color: rgba(20, 20, 20, 0.9);
+}
+
+.goUp.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .nav {
@@ -355,16 +401,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: inherit;
-      -ms-flex-align: inherit;
-          align-items: inherit;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
 }
 
 .container #about-me .content-box .photo img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   border-radius: 10px;
   -webkit-user-select: none;
@@ -374,8 +420,7 @@ body {
 }
 
 .container #about-me .content-box .text {
-  width: 85%;
-  margin-left: 2rem;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -732,6 +777,9 @@ footer {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     background-color: rgba(20, 20, 20, 0.9);
+  }
+  .lang {
+    position: absolute;
   }
   .container .title {
     width: 100%;

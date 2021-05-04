@@ -71,11 +71,14 @@ window.onscroll = () => onScroll();
 
 function onScroll() {
     const navbar = document.getElementById('nav');
+    const goUp = document.getElementById('goUp');
     const top = navbar.offsetTop;
 
     if (window.pageYOffset > top) {
         navbar.classList.add('active');
+        goUp.classList.add('active');
     } else {
         navbar.classList.remove('active');
+        goUp.classList.remove('active');
     };
 };
