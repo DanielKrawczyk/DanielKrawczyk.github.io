@@ -4,6 +4,8 @@
         text-align: center;
         background: linear-gradient(to left, rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.9)), url('../images/contact-bg.jpg') right center;
         background-repeat: no-repeat;
+        box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
+        @include box-border;
         @include padding-y(5rem);
         
         .list {

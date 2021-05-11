@@ -1,0 +1,93 @@
+#hobbies {
+    width: 100%;
+    padding-bottom: 10rem;
+    padding-top: 3rem;
+
+    .content {
+
+        .list {
+            @include flex(column wrap, center, center);
+
+            &-item {
+                margin-top: 5rem;
+                @include flex(row nowrap, space-between, center);
+
+                &_img {
+                    padding: 1rem 0;
+
+                    & img {
+                        width: 44vw;
+                        height: auto;
+                    }
+                    &.left {
+                        border-right: 3px solid $secondary;
+                        & img {
+                            border-bottom-left-radius: 10px;
+                            border-top-left-radius: 10px;
+                        }
+                    }
+                    &.right {
+                        border-left: 3px solid $secondary;
+                        & img {
+                            border-bottom-right-radius: 10px;
+                            border-top-right-radius: 10px;
+                        }
+                    }
+                }
+
+                &_desc {
+                    width: 50vw;
+                    padding: 1vw;
+
+                    & h2 {
+                        color: $secondary;
+                    }
+
+                    & p {
+                        text-align: justify;
+                    }
+
+                    &.left {
+                        & h2 {
+                            text-align: start;
+                        }
+                    }
+                    &.right {
+                        & h2 {
+                            text-align: end;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 800px) {
+    #hobbies .content .list .list-item {
+        @include flex(column wrap, center, center);
+
+        &.rev {
+            @include flex(column-reverse wrap, center, center);
+        }
+
+        &_img {
+            padding: 0;
+            & img {
+                width: 70vw;
+            }
+            &.left, &.right {
+                border: none;
+                border-bottom: 3px solid $secondary;
+                & img {
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+        }
+        &_desc {
+            width: 90vw;
+        }
+    }
+}

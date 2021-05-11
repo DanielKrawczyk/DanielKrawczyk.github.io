@@ -19,7 +19,12 @@
                     @include padding-y(4rem);
 
                     &_desc{
+                        margin-top: 1rem;
                         @include weight(bold);
+                    }
+
+                    &_photo img {
+                        margin-right: 1rem;
                     }
                 }
             }

@@ -125,12 +125,12 @@ body {
 }
 
 .img {
-  width: 30%;
+  width: 30vw;
   height: auto;
 }
 
 .img-big {
-  width: 10%;
+  width: 10vw;
   height: auto;
 }
 
@@ -660,7 +660,151 @@ body {
 }
 
 .container #skills .content .list-item_desc {
+  margin-top: 1rem;
   font-weight: bold;
+}
+
+.container #skills .content .list-item_photo img {
+  margin-right: 1rem;
+}
+
+#hobbies {
+  width: 100%;
+  padding-bottom: 10rem;
+  padding-top: 3rem;
+}
+
+#hobbies .content .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hobbies .content .list-item {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hobbies .content .list-item_img {
+  padding: 1rem 0;
+}
+
+#hobbies .content .list-item_img img {
+  width: 44vw;
+  height: auto;
+}
+
+#hobbies .content .list-item_img.left {
+  border-right: 3px solid #ff6400;
+}
+
+#hobbies .content .list-item_img.left img {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#hobbies .content .list-item_img.right {
+  border-left: 3px solid #ff6400;
+}
+
+#hobbies .content .list-item_img.right img {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#hobbies .content .list-item_desc {
+  width: 50vw;
+  padding: 1vw;
+}
+
+#hobbies .content .list-item_desc h2 {
+  color: #ff6400;
+}
+
+#hobbies .content .list-item_desc p {
+  text-align: justify;
+}
+
+#hobbies .content .list-item_desc.left h2 {
+  text-align: start;
+}
+
+#hobbies .content .list-item_desc.right h2 {
+  text-align: end;
+}
+
+@media only screen and (max-width: 800px) {
+  #hobbies .content .list .list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #hobbies .content .list .list-item.rev {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse wrap;
+            flex-flow: column-reverse wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #hobbies .content .list .list-item_img {
+    padding: 0;
+  }
+  #hobbies .content .list .list-item_img img {
+    width: 70vw;
+  }
+  #hobbies .content .list .list-item_img.left, #hobbies .content .list .list-item_img.right {
+    border: none;
+    border-bottom: 3px solid #ff6400;
+  }
+  #hobbies .content .list .list-item_img.left img, #hobbies .content .list .list-item_img.right img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #hobbies .content .list .list-item_desc {
+    width: 90vw;
+  }
 }
 
 .container #contact {
@@ -668,6 +812,10 @@ body {
   background: -webkit-gradient(linear, right top, left top, from(rgba(40, 40, 40, 0.5)), to(rgba(40, 40, 40, 0.9))), url("../images/contact-bg.jpg") right center;
   background: linear-gradient(to left, rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0.9)), url("../images/contact-bg.jpg") right center;
   background-repeat: no-repeat;
+  -webkit-box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
+          box-shadow: -5px -5px 1rem black, 5px 5px 1rem black;
+  border-top: 1px solid #ff6400;
+  border-bottom: 1px solid #ff6400;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
