@@ -621,6 +621,10 @@ body {
   background-color: #000;
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
 .container #skills {
   width: 100%;
   padding: 4rem;
