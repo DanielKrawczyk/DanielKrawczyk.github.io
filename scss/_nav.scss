@@ -1,0 +1,90 @@
+.nav {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    user-select: none;
+    @include transition(0.7s);
+
+    &-button {
+        width: 28px;
+        height: 20px;
+        top: 2rem;
+        right: 2rem;
+        position: fixed;
+        visibility: hidden;
+        z-index: 1;
+        @include transition(0.7s);
+
+        &:hover {
+            @include pointer;
+        }
+    
+        &_burger {
+            width: 28px;
+            height: 3px;
+            top: 20px;
+            right: 20px;
+            background: #fff;
+            @include transition(0.7s);
+    
+            &::before {
+                content: '';
+                width: 28px;
+                height: 3px;
+                top: -8px;
+                position: absolute;
+                background: #fff;
+                @include transition(0.7s);
+            }
+
+            &::after {
+                content: '';
+                width: 20px;
+                height: 3px;
+                top: 8px;
+                position: absolute;
+                background: #fff;
+                @include transition(0.7s);
+            }
+
+            &.open {
+                transform: rotate(720deg);
+                background: transparent;
+    
+                &::before {
+                    transform: rotate(45deg) translate(5px, 8px);
+                }
+
+                &::after {
+                    width: 28px;
+                    transform: rotate(-45deg) translate(3px, -7px);
+                }
+            }
+        }
+    }
+
+    &-bar {
+        overflow: hidden;
+        @include flex(row nowrap, space-evenly, center);
+
+        &_item {
+            font-size: 1.4rem;
+            @include padding-y(1rem);
+            @include weight(bold);
+
+            a {
+                @include transition(0.3s);
+
+                &:hover {
+                    @include pointer;
+                }
+            }
+        }
+    }
+    &.active {
+        position: fixed;
+        z-index: 1;
+        background-color: #000;
+        box-shadow: 3px 3px 6px #000;
+    }
+}

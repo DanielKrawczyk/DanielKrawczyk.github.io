@@ -1,0 +1,136 @@
+@media only screen and(max-width:1023px) {
+    .img {
+        width: 70%;
+    }
+    .img-big {
+        width: 30%;
+    }
+    .content {
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    .nav {
+        position: absolute;
+
+        &-button {
+            visibility: visible;
+        }
+
+        &-bar {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            transform: translateX(-100%);
+            @include marginAuto;
+            @include flex(column wrap, center, center);
+            @include transition(0.3s);
+
+            &_item {
+
+                font-size: 1.5rem;
+            }
+
+            &.active {
+                transform: translateX(0);
+                background-color: rgba(20, 20, 20, 0.9);
+            }
+        }
+    }
+
+    .lang {
+        position: absolute;
+    }
+
+    .container {
+
+        .title {
+            width: 100%;
+
+            .name {
+                width: 90%;
+            }
+            .undername {
+                @include weight(normal);
+                @include flex(column wrap, center, center);
+            }
+        }
+
+        #about-me {
+            padding: 0.5rem;
+            .content-box {
+                @include flex(column wrap, center, center);
+                & .photo {
+                    text-align: center;
+                    img {
+                        max-width: 90%;
+                        height: auto;
+                    }
+                }
+                .text {
+                    margin: 0.5rem;
+                }
+            }
+        }
+
+        #portfolio {
+            .content .list {
+                width: 100%;
+                &-item_photo_x{
+                    width: 80%;
+                }
+            }
+        }
+
+        #skills {
+            padding: 0;
+            .content{
+                .list-item_desc, .list-item_photo{
+                    @include flex(column wrap, center, center);
+                }
+            }
+        }
+
+        #contact {
+            background-size: cover;
+            
+            .list {
+                width: 100%;
+                &-item h2 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:600px) {
+    .container .title {
+        .name {
+            font-size: 3rem;
+        }
+        .undername h2 {
+            font-size: 1.2rem;
+        }
+    }
+}
+@media only screen and (min-width:800px) and (max-width:1279px) {
+    .container {
+        #about-me {
+            padding: 0.5rem;
+            .content-box {
+                @include flex(column wrap, center, center);
+                & .photo {
+                    text-align: center;
+                    img {
+                        max-width: 60%;
+                        height: auto;
+                    }
+                }
+                .text {
+                    margin: 0.5rem;
+                }
+            }
+        }
+    }
+}
