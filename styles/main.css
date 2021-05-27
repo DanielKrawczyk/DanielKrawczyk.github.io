@@ -503,7 +503,6 @@ body {
 }
 
 .container #portfolio .content .list-item {
-  opacity: 0.5;
   overflow: hidden;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -542,7 +541,6 @@ body {
 }
 
 .container #portfolio .content .list-item_photo img:hover {
-  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -872,8 +870,10 @@ body {
 }
 
 footer {
+  max-height: max-content;
   font-size: 0.8rem;
   text-align: center;
+  overflow: hidden;
   padding: 1rem;
   border-top: 1px solid #ff6400;
   -webkit-user-select: none;
