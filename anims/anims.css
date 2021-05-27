@@ -48,6 +48,7 @@
 
 .scroll {
     opacity: 0;
+    overflow: hidden;
 }
 
 .scroll.scrolled {
