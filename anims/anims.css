@@ -48,7 +48,6 @@
 
 .scroll {
     opacity: 0;
-    overflow: hidden;
 }
 
 .scroll.scrolled {
@@ -65,4 +64,8 @@
 
 .scrolled.fade-in-top {
     animation: fade-in-top 0.4s ease-in-out both;
+}
+
+.content {
+    overflow: hidden;
 }
