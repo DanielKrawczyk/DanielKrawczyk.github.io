@@ -347,28 +347,6 @@ body {
   font-weight: 700;
 }
 
-.container .title .undername {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
-}
-
-.container .title .undername h2, .container .title .undername span {
-  font-size: 1.2rem;
-}
-
 .container .see-more {
   margin: 2rem;
   text-align: center;
@@ -939,22 +917,6 @@ footer {
   .container .title .name {
     width: 90%;
   }
-  .container .title .undername {
-    font-weight: normal;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .container #about-me {
     padding: 0.5rem;
   }
@@ -1021,9 +983,6 @@ footer {
 @media only screen and (max-width: 600px) {
   .container .title .name {
     font-size: 3rem;
-  }
-  .container .title .undername h2 {
-    font-size: 1.2rem;
   }
 }
 
