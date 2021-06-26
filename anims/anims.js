@@ -1,6 +1,6 @@
 const scroll = document.querySelectorAll('.scroll');
 
-const elIn = (el, x = 1) => {
+function elIn(el, x = 1) {
     const topElem = el.getBoundingClientRect().top;
 
     return (
@@ -8,7 +8,7 @@ const elIn = (el, x = 1) => {
     );
 };
 
-const elOut = (el) => {
+function elOut(el) {
     const topElem = el.getBoundingClientRect().top;
 
     return (
@@ -16,15 +16,15 @@ const elOut = (el) => {
     );
 };
 
-const show = (el) => {
+function show(el) {
     el.classList.add('scrolled');
 };
 
-const hide = (el) => {
+function hide(el) {
     el.classList.remove('scrolled');
 };
 
-const onScrollEvent = () => {
+function onScrollEvent() {
     scroll.forEach(e => {
         if (elIn(e, 1.25)) {
             show(e)

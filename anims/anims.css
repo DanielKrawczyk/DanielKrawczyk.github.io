@@ -52,7 +52,7 @@
 }
 
 .scroll.scrolled {
-    animation: fade-in 1s ease-in-out both;
+    animation: fade-in 0.5s ease-in-out both;
 }
 
 .scrolled.fade-in-right {
@@ -67,7 +67,15 @@
     animation: fade-in-top 0.4s ease-in-out both;
 }
 
+.test {
+    transform: translateX(100%);
+}
+
 .content {
+    overflow: hidden;
+}
+
+.overflow {
     overflow: hidden;
 }
 
