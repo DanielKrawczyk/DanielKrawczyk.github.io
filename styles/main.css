@@ -91,8 +91,13 @@ body {
   cursor: pointer;
 }
 
-.colored, .symbol {
+.colored, .colored a, .symbol {
   color: #ff6400;
+}
+
+.colored a:hover {
+	color: white;
+	border-bottom: 1px solid white;
 }
 
 .symbol {
@@ -341,11 +346,13 @@ body {
   font-weight: 500;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  text-shadow: 2px 2px 2px #000;
 }
 
 .container .title .surname {
   color: #ff6400;
   font-weight: 700;
+  text-shadow: 2px 2px 2px #000;
 }
 
 .container .see-more {
