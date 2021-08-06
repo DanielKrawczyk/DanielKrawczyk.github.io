@@ -80,55 +80,29 @@
 }
 
 .undername {
-    margin-top: 0.5rem;
-}
-
-.undername h2 {
-    position: relative;
-    top: 50%;  
+    margin-top: 1rem;
+    font-size: 24px;
     font-family: 'Anonymous Pro', monospace;
-    margin: 0 auto;
-    font-size: 1.5rem;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%); 
 }
 
-.typing {
-    animation: typing 4s steps(29) 1s 1 normal both,
-        textCursor 1s infinite normal;
-}
-
-@keyframes typing {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 23.8rem;
-    }
+.undername span {
+    animation: textCursor 1s infinite normal;
 }
 
 @keyframes textCursor {
     0% {
-        border-right: 2px solid rgb(255, 255, 255);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
     }
     100% {
-        border-right: 2px solid transparent;
+        opacity: 1;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .undername h2 {
-        font-size: 1rem;
-    }
-
-    @keyframes typing {
-        0% {
-            width: 0;
-        }
-        100% {
-            width: 15.9rem;
-        }
+@media screen and (max-width: 400px) {
+    .undername {
+        font-size: 16px;
     }
 }
