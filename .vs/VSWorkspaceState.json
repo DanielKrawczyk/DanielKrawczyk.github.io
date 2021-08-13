@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\anims",
-    "\\scripts"
+    "\\scripts",
+    "\\styles"
   ],
-  "SelectedNode": "\\anims\\anims.css",
+  "SelectedNode": "\\anims\\anims.js",
   "PreviewInSolutionExplorer": false
 }
