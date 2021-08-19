@@ -8,7 +8,7 @@
         padding: 5vh 20vw 1vh 20vw;
         margin: 0 auto;
         font-size: 100px;
-        border-bottom: 1px solid rgb(50, 60, 90);
+        border-bottom: 1px solid $color-ink;
     }
 
     h6 {
@@ -19,7 +19,8 @@
 .question {
     width: 100vw;
     height: 30vh;
-    background-color: rgb(20, 20, 20);
+    background-color: $color-black;
+    box-shadow: 0 10px 10px $color-black-tr, 10px 0 10px $color-black-tr;
     text-align: center;
 
     &-texts {
@@ -33,12 +34,12 @@
 
             .first {
                 padding: 2vh 2vw;
-                border: 2px solid rgb(255, 90, 0);
+                border: 2px solid $color-orange;
                 background-color: rgba(255, 255, 255, 0.1);
                 @include trans(0.5s);
 
                 &-text {
-                    color: #fff;
+                    color: $color-white;
                     font-size: 20px;
                     padding: 12px;
                     font-family: $font-titles;
@@ -58,9 +59,9 @@
                     @extend .first-text;
 
                     a {
-                        color: #fff;
+                        color: $color-white;
                         padding-bottom: 5px;
-                        border-bottom: 1px solid #fff;
+                        border-bottom: 1px solid $color-white;
                     }
                 }
             }
@@ -69,7 +70,7 @@
                 cursor: pointer;
 
                 .first {
-                    background-color: rgb(255, 90, 0);
+                    background-color: $color-orange;
 
                     .first-text {
                         transform: translateY(-40%) rotateX(-90deg);
@@ -95,7 +96,7 @@
     &_list {
         position: relative;
         z-index: 10;
-        background-color: rgb(20, 20, 20);
+        background-color: $color-black;
         border-radius: 20px 0 0 20px;
         opacity: 0.4;
         transform: translateX(100%);
@@ -109,13 +110,13 @@
                 z-index: 10;
                 font-size: 1.5vw;
                 padding: 2vh 1vw;
-                color: #fff;
+                color: $color-white;
     
                 p i, a i {
                     position: relative;
                     z-index: 10;
                     opacity: 0.6;
-                    color: #fff;
+                    color: $color-white;
                     @include trans(0.2s);
     
                     &:hover {
@@ -130,14 +131,14 @@
                     top: 20%;
                     left: 0;
                     width: max-content;
-                    background-color: rgb(20, 20, 20);
+                    background-color: $color-black;
                     padding: 1vh 1vw;
                     opacity: 0;
                     border-radius: 20px 0 0 20px;
                     @include trans(0.5s);
     
                     font-size: 16px;
-                    color: #fff;
+                    color: $color-white;
                     font-family: $font-titles;
                 }
     
@@ -164,5 +165,5 @@
 }
 
 .colored {
-    color: rgb(255, 90, 0);
+    color: $color-orange;
 }

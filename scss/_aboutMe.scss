@@ -1,6 +1,6 @@
 .aboutMe {
-    min-width: 100vw;
-    min-height: 100vh;
+    @include min-size;
+    margin-bottom: 10vh;
     @include flex(row nowrap, space-evenly, center);
 
     .text {
@@ -13,7 +13,7 @@
             padding: 0 5vw 5vh 5vw;
             font-size: 70px;
             font-family: $font-handwrite;
-            border-bottom: 1px solid rgb(50, 60, 90);
+            border-bottom: 1px solid $color-ink;
         }   
 
         &-undername {
@@ -29,6 +29,16 @@
                 font-size: 20px;
                 font-family: $font-primary;
                 padding: 1vh 0;
+
+                a {
+                    color: $color-black_tr;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: $color-black;
+                        border-bottom: 1px solid $color-yellow;
+                    }
+                }
             }
         }
     }
@@ -48,8 +58,6 @@
             img {
                 width: 100%;
                 height: auto;
-                border-bottom: 2px solid rgb(150, 50, 200);
-                border-left: 2px solid rgb(20, 10, 100);
             }
         }
 
@@ -60,7 +68,9 @@
             right: -10%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to right, rgb(20, 10, 100), rgb(150, 50, 200));
+            border: 10px solid transparent;
+            border-image: linear-gradient(to bottom right, rgb(20, 10, 100), rgb(150, 50, 200));
+            border-image-slice: 1;
         }
     }
 }

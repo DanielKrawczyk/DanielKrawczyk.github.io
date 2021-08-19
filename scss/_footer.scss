@@ -6,7 +6,7 @@ footer {
         width: 100vw;
         height: 90vh;
         background-color: rgb(20, 30, 40);
-        color: #fff;
+        color: $color-white;
 
         .list {
             padding: 12vh 0;
@@ -20,7 +20,7 @@ footer {
                     width: fit-content;
                     margin: 0 auto;
                     padding: 1vh 5vw;
-                    border-bottom: 1px solid rgb(255, 90, 0);
+                    border-bottom: 1px solid $color-orange;
 
                     h1 {
                         font-size: 60px;
@@ -39,15 +39,15 @@ footer {
                         @include flex(column wrap, center, center);
 
                         i {
-                            color: #fff;
+                            color: $color-white;
                             font-size: 80px;
                             @include trans(0.5s);
                         }
 
-                        a {
+                        p {
                             font-size: 20px;
                             margin-top: 2vh;
-                            color: #fff;
+                            color: $color-white;
                             font-family: $font-titles;
                             transform: translateY(-40%) rotateX(-90deg);
                             @include trans(0.5s);
@@ -55,10 +55,10 @@ footer {
 
                         &:hover {
                             i {
-                                color: rgb(255, 90, 0);
+                                color: $color-orange;
                             }
 
-                            a {
+                            p {
                                 transform: translateY(0) rotateX(0);
                             }
                         }
@@ -80,12 +80,12 @@ footer {
                     @include flex(row wrap, space-between, center);
 
                     h1 a i {
-                        color: #fff;
+                        color: $color-white;
                         font-size: 100px;
                         @include trans(0.5s);
 
                         &:hover {
-                            color: rgb(255, 90, 0);
+                            color: $color-orange;
                         }
                     }
                 }
@@ -102,12 +102,13 @@ footer {
         p {
             padding: 5vh 0;
             color: rgba(255, 255, 255, 0.6);
+
             a {
-                color: rgb(200, 200, 200);
+                color: $color-hover;
     
                 &:hover {
                     cursor: pointer;
-                    color: rgb(255, 255, 255);
+                    color: $color-white;
                     border-bottom: 1px solid rgb(255, 255, 0);
                 }
             }

@@ -1,8 +1,7 @@
 #overlay {
     position: fixed;
     z-index: 20;
-    width: 100vw;
-    height: 100vh;
+    @include min-size;
     background-color: rgba(0, 0, 0, 0.9);
 
     #progress-status {
@@ -11,12 +10,14 @@
         text-align: center;
 
         font-size: 2vw;
+        font-family: $font-handwrite;
         letter-spacing: 2px;
+        color: $color-white;
     }
 
     #progress {
         height: 3px;
-        background: #fff;
+        background: $color-orange;
         position: absolute;
         width: 0;
         top: 50%;

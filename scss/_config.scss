@@ -1,22 +1,22 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
-
-@font-face {
-    src: url('../fonts/GothicFont.ttf');
-    font-family: 'Gothic2';
-}
 
 $font-primary: 'Open Sans', sans-serif;
 $font-titles: 'Prata', sans-serif;
 $font-main: 'Cairo', sans-serif;
 $font-nav: 'Fredericka the Great', cursive;
-$font-gothic: 'Gothic2';
 $font-handwrite: 'Caveat', cursive;
+$color-ink: rgb(50, 60, 90);
+$color-orange: rgb(255, 90, 0);
+$color-yellow: rgb(255, 200, 0);
+$color-white: rgb(255, 255, 255);
+$color-hover: rgb(200, 200, 200);
+$color-black: rgb(20, 20, 20);
+$color-black_tr: rgba(20, 20, 20, 0.9);
 
 * {
     box-sizing: border-box;
@@ -46,15 +46,13 @@ body {
     align-items: $align;
 }
 
-@mixin bg {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}
-
 @mixin trans($s) {
     transition: all $s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+@mixin min-size {
+    width: 100vw;
+    min-height: 100vh;
 }
 
 @keyframes tracking-in {
@@ -72,17 +70,17 @@ body {
 }
 
 @keyframes focus-in {
-   0% {
-    letter-spacing: -0.5em;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+    }
 }
 @keyframes blur-in {
     0% {
@@ -95,7 +93,7 @@ body {
               filter: blur(0px);
       opacity: 1;
     }
-  }
+}
 
 .hide {
     visibility: hidden;

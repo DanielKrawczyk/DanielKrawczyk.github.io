@@ -1,3 +1,263 @@
+@media screen and (max-width: 1601px) {
+    #top .top .main-text {
+        font-size: 30px;
+    }
+    .aboutMe .text {
+
+        &-name {
+            font-size: 50px;
+        }
+
+        &-undername {
+            font-size: 30px;
+        }
+
+        &-about p {
+            font-size: 16px;
+        }
+    }
+
+    footer .upper .list {
+
+        &-contact {
+
+            &_text h1 {
+                font-size: 40px;
+            }
+
+            &_items {
+
+                h1 i {
+                    font-size: 80px;
+                }
+
+                h1 a {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        &-links {
+
+            &_items {
+
+                h1 a i {
+                    font-size: 80px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1337px) {
+    .title h1 {
+        font-size: 60px;
+    }
+
+    .aboutMe .text {
+
+        &-name {
+            font-size: 40px;
+        }
+
+        &-undername {
+            font-size: 25px;
+        }
+
+        &-about p {
+            font-size: 14px;
+        }
+    }
+    
+    footer .upper .list {
+
+        &-contact {
+
+            &_items {
+
+                h1 i {
+                    font-size: 60px;
+                }
+
+                h1 a {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &-links {
+
+            &_items {
+
+                h1 a i {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-height: 601px) {
+    .portfolio .list {
+        @include flex(column wrap, center, center);
+
+        &-item {
+            width: 80vw;
+            min-height: 70vh;
+            margin: auto;
+
+            &_info {
+                width: 80vw;
+                height: 70vh;
+
+                &_title {
+                    font-size: 20px;
+                }
+
+                &_description p {
+                    font-size: 14px;
+                }
+
+                &_links {
+                    a h2 {
+                        font-size: 24px;
+                    }
+                    a h1 {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer .upper .list {
+
+        &-contact {
+
+            &_text h1 {
+                font-size: 20px;
+            }
+
+            &_items {
+
+                h1 i {
+                    font-size: 40px;
+                }
+
+                h1 a {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &-links {
+
+            &_items {
+
+                h1 a i {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .title {
+        h1 {
+            font-size: 40px;
+        }
+        h6 {
+            font-size: 16px;
+        }
+    }
+
+    #top .top .main-text {
+        font-size: 30px;
+    }
+
+    .aboutMe .text {
+
+        &-name {
+            font-size: 30px;
+        }
+
+        &-undername {
+            font-size: 20px;
+        }
+
+        &-about p {
+            font-size: 12px;
+        }
+    }
+
+    .portfolio .list {
+        @include flex(column wrap, center, center);
+
+        &-item {
+            width: 80vw;
+            min-height: 70vh;
+            margin: auto;
+
+            &_info {
+                width: 80vw;
+                height: 70vh;
+
+                &_title {
+                    font-size: 20px;
+                }
+
+                &_description p {
+                    font-size: 14px;
+                }
+
+                &_links {
+                    a h2 {
+                        font-size: 24px;
+                    }
+                    a h1 {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 780px) {
+
+    .skills .skills-second .skills-second_list .skills-second_list_item .skills-second_list_item_img img.img-big {
+        width: 24vw;
+    }
+
+    footer .upper .list {
+
+        &-contact {
+
+            &_items {
+
+                h1 i {
+                    font-size: 60px;
+                }
+
+                h1 a {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-links {
+
+            &_items {
+
+                h1 a i {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 800px) {
     .nav {
         display: none;
@@ -17,6 +277,7 @@
             padding: 5vh 5vw;
 
             a {
+                color: $color-white;
                 font-size: 24px;
             }
         }
@@ -30,6 +291,14 @@
 
             .main-text {
                 font-size: 20px;
+                filter: blur(12px);
+                @include trans(1.5s);
+
+                &.show {
+                    animation: none;
+                    filter: blur(0);
+                    opacity: 1;
+                }
             }
         }
     }
@@ -40,6 +309,7 @@
         left: 0;
 
         &_list {
+            opacity: 0.9;
             border-radius: 20px 20px 0 0;
             transform: translateY(100%);
             @include flex(row nowrap, space-evenly, center);
@@ -92,7 +362,7 @@
         }
 
         .image {
-            width: 80vw;
+            width: 60vw;
         }
     }
 
@@ -120,12 +390,12 @@
 
             &-item {
                 width: 100vw;
-                height: auto;
+                height: fit-content;
                 margin: 2vh 0;
 
                 &_info {
                     width: 100%;
-                    height: auto;
+                    height: fit-content;
                     opacity: 0.8;
 
                     &_title {
@@ -168,7 +438,7 @@
             @include flex(column wrap, center, center);
 
             &_img {
-                width: 80vw;
+                width: 60vw;
             }
 
             &_list {
@@ -197,6 +467,7 @@
     footer {
 
         .upper {
+            height: 100vh;
 
             .list {
 
@@ -249,46 +520,5 @@
                 padding: 1vh 0;
             }
         }
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 800px) {
-
-    .skills .skills-second .skills-second_list .skills-second_list_item .skills-second_list_item_img img.img-big {
-        width: 24vw;
-    }
-
-    footer .upper .list {
-
-        &-contact {
-
-            &_items {
-
-                h1 i {
-                    font-size: 60px;
-                }
-
-                h1 a {
-                    font-size: 16px;
-                }
-            }
-        }
-
-        &-links {
-
-            &_items {
-
-                h1 a i {
-                    font-size: 60px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1025px) {
-    .question .question-texts {
-        width: 40vw;
-        height: 9vh;
     }
 }

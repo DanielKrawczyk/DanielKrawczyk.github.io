@@ -1,7 +1,5 @@
 .portfolio {
-    width: 100vw;
-    min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    @include min-size;
 
     .list {
         padding: 10vh 0;
@@ -19,7 +17,7 @@
                 padding: 2vh 2vw;
                 opacity: 0;
                 background-color: rgba(20, 20, 20, 0.8);
-                color: #fff;
+                color: $color-white;
                 @include trans(0.4s);
 
                 &_title {
@@ -44,14 +42,14 @@
                     a {
                         text-decoration: none;
                         h2 {
-                            color: rgb(200, 200, 200);
+                            color: $color-hover;
                             font-family: $font-titles;
                             font-size: 30px;
                             letter-spacing: 3px;
     
                             &:hover {
-                                color: rgb(255, 255, 255);
-                                border-bottom: 1px solid rgb(255, 255, 0);
+                                color: $color-white;
+                                border-bottom: 1px solid $color-yellow;
                                 cursor: pointer;
                             }
                         }
@@ -59,7 +57,7 @@
 
                     a h1 {
                         font-size: 60px;
-                        color: #fff;
+                        color: $color-white;
                         @include trans(0.5s);
 
                         &:hover {

@@ -1,11 +1,12 @@
 #top {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    @include min-size;
     background: url('../images/top-bg.png');
-    @include bg;
-    background-size: 105% 105%;
-    box-shadow: 0 10px 10px rgba(20, 20, 20, 0.9);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    box-shadow: 0 10px 10px $color-black_tr;
 
     .top {
         width: 100%;
@@ -22,7 +23,7 @@
             letter-spacing: 4px;
             text-transform: capitalize;
             font-size: 50px;
-            color: #fff;
+            color: $color-white;
             opacity: 0;
             
             &.show {
