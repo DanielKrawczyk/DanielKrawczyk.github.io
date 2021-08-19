@@ -390,20 +390,20 @@
 
             &-item {
                 width: 100vw;
-                height: fit-content;
+                height: 80vh;
                 margin: 2vh 0;
 
                 &_info {
                     width: 100%;
-                    height: fit-content;
+                    height: 80vh;
                     opacity: 0.8;
 
                     &_title {
-                        font-size: 24px;
+                        font-size: 20px;
                     }
 
                     &_description {
-                        font-size: 12px;
+                        font-size: 10px;
                     }
 
                     &_links {

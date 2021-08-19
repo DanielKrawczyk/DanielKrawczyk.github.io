@@ -1369,23 +1369,19 @@ footer .lower p a:hover {
   }
   .portfolio .list-item {
     width: 100vw;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 80vh;
     margin: 2vh 0;
   }
   .portfolio .list-item_info {
     width: 100%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 80vh;
     opacity: 0.8;
   }
   .portfolio .list-item_info_title {
-    font-size: 24px;
+    font-size: 20px;
   }
   .portfolio .list-item_info_description {
-    font-size: 12px;
+    font-size: 10px;
   }
   .portfolio .list-item_info_links a h2 {
     font-size: 16px;
