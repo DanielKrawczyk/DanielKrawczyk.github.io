@@ -1,0 +1,80 @@
+.portfolio {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+
+    .list {
+        padding: 10vh 0;
+        @include flex(row wrap, flex-start, flex-start);
+
+        &-item {
+            min-width: 50vw;
+            min-height: 50vh;
+            background-position: center;
+            background-size: cover;
+
+            &_info {
+                width: 50vw;
+                height: 50vh;
+                padding: 2vh 2vw;
+                opacity: 0;
+                background-color: rgba(20, 20, 20, 0.8);
+                color: #fff;
+                @include trans(0.4s);
+
+                &_title {
+                    text-align: center;
+                    font-family: $font-titles;
+                    font-size: 30px;
+                    padding: 2vh 0;
+                }
+
+                &_description {
+                    font-family: $font-primary;
+
+                    p {
+                        padding: 1vh 0;
+                    }
+                }
+
+                &_links {
+                    padding-top: 4vh;
+                    @include flex(row nowrap, space-evenly, center);
+
+                    a {
+                        text-decoration: none;
+                        h2 {
+                            color: rgb(200, 200, 200);
+                            font-family: $font-titles;
+                            font-size: 30px;
+                            letter-spacing: 3px;
+    
+                            &:hover {
+                                color: rgb(255, 255, 255);
+                                border-bottom: 1px solid rgb(255, 255, 0);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    a h1 {
+                        font-size: 60px;
+                        color: #fff;
+                        @include trans(0.5s);
+
+                        &:hover {
+                            transform: rotateY(180deg);
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+
+                .list-item_info {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

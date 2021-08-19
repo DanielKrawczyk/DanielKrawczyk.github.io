@@ -1,0 +1,116 @@
+footer {
+    width: 100vw;
+    height: auto;
+
+    .upper {
+        width: 100vw;
+        height: 90vh;
+        background-color: rgb(20, 30, 40);
+        color: #fff;
+
+        .list {
+            padding: 12vh 0;
+            @include flex(column wrap, center, center);
+
+            &-contact {
+                width: 100%;
+                text-align: center;
+
+                &_text {
+                    width: fit-content;
+                    margin: 0 auto;
+                    padding: 1vh 5vw;
+                    border-bottom: 1px solid rgb(255, 90, 0);
+
+                    h1 {
+                        font-size: 60px;
+                        font-family: $font-main;
+                        letter-spacing: 3px;
+                    }
+                }
+
+                &_items {
+                    width: 50%;
+                    margin: 5vh auto;
+                    @include flex(row wrap, space-between, center);
+
+                    h1 {
+                        width: 50%;
+                        @include flex(column wrap, center, center);
+
+                        i {
+                            color: #fff;
+                            font-size: 80px;
+                            @include trans(0.5s);
+                        }
+
+                        a {
+                            font-size: 20px;
+                            margin-top: 2vh;
+                            color: #fff;
+                            font-family: $font-titles;
+                            transform: translateY(-40%) rotateX(-90deg);
+                            @include trans(0.5s);
+                        }
+
+                        &:hover {
+                            i {
+                                color: rgb(255, 90, 0);
+                            }
+
+                            a {
+                                transform: translateY(0) rotateX(0);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-links {
+                width: 100%;
+                @include flex(column wrap, center, center);
+
+                &_text {
+                    @extend .list-contact_text;
+                }
+
+                &_items {
+                    width: 50%;
+                    padding: 5vh 5vw;
+                    @include flex(row wrap, space-between, center);
+
+                    h1 a i {
+                        color: #fff;
+                        font-size: 100px;
+                        @include trans(0.5s);
+
+                        &:hover {
+                            color: rgb(255, 90, 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .lower {
+        width: 100vw;
+        height: 20vh;
+        background-color: rgb(10, 10, 10);
+        @include flex(row wrap, space-evenly, center);
+
+        p {
+            padding: 5vh 0;
+            color: rgba(255, 255, 255, 0.6);
+            a {
+                color: rgb(200, 200, 200);
+    
+                &:hover {
+                    cursor: pointer;
+                    color: rgb(255, 255, 255);
+                    border-bottom: 1px solid rgb(255, 255, 0);
+                }
+            }
+        }
+    }
+}
