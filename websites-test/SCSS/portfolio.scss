@@ -1,0 +1,10 @@
+@import 'config', 'navbar';
+
+.portfolio {
+    
+    &-top {
+        width: 100vw;
+        height: 100vh;
+        @include bg-linear(linear-gradient(to bottom, rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.2)), url('/websites-test/images/portfolio.jpg') center);    
+    }
+}

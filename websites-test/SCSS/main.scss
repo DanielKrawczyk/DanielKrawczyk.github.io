@@ -1,0 +1,163 @@
+@import 'config', 'navbar';
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+
+    &-background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        @include bg(url('/websites-test/images/photo-1.jpg') center);
+        @include trans(2s);
+    }
+    
+    &-top {
+        width: 100%;
+        height: 100%;
+
+        .text-center {
+            z-index: 6;
+        
+            &_arrow-left {
+                position: absolute;
+                top: 30%;
+                left: 0;
+    
+                i {
+                    color: rgb(255, 255, 255);
+                    opacity: 0.2;
+                    font-size: 40px;
+                    @include trans(0.5s);
+    
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 1;
+                    }
+                }
+            }
+    
+            &_arrow-right {
+                @extend .text-center_arrow-left;
+                left: unset;
+                right: 0;
+            }
+    
+        }
+    
+        .slider {
+    
+            &-dots {
+                position: absolute;
+                z-index: 4;
+                width: 100%;
+                height: 5%;
+                bottom: 0;
+                @include flex(row nowrap, center, center);
+    
+                &_item {
+                    margin: 0 1vw;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: white;
+                    @include trans(0.5s);
+    
+                    &.active {
+                        background-color: rgb(150, 150, 150);
+                    }
+    
+                    &:hover {
+                        cursor: pointer;
+                        background-color: rgb(150, 150, 150);
+                    }
+                }
+            }
+        }
+    }
+
+    &-content {
+        width: 100%;
+        min-height: fit-content;
+        background-color: #fff;
+
+        &_field {
+            width: 80%;
+            padding: 10vh 0;
+            margin: 0 auto;
+            @include flex(row wrap, space-between, flex-start);
+
+            &_photo {
+                width: 40%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &_text {
+                width: 50%;
+                text-align: center;
+
+                h2 {
+                    padding: 15vh 2vw 10vh 2vw;
+                }
+
+                p {
+                    padding: 2vh 4vw;
+                }
+            }
+        }
+
+        &_link {
+            width: 100%;
+
+            &_photo {
+                width: 100%;
+                height: fit-content;
+                background: url('/websites-test/images/aboutMe.jpg') center fixed;
+                padding: 10vh 0;
+                text-align: center;
+                
+                a {
+                    font-family: $font-nav;
+                    color: #fff;
+                    font-size: 40px;
+                    padding: 1vh 2vw;
+                    border: 1px solid transparent;
+                    @include trans(0.4s);
+
+                    &:hover {
+                        border-color: #fff;
+                    }
+                }
+            }
+        }
+
+        &_offers {
+            width: 100%;
+
+            &_list {
+                width: 80%;
+                margin: 2vh auto;
+                @include flex(row wrap, center, center);
+                    
+                &_item {
+                    width: 33%;
+
+                    &_title {
+
+                    }
+
+                    &_icon {
+                        
+                    }
+                }
+            }
+        }
+    }
+}

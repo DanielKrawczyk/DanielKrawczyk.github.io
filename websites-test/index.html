@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/websites-test/styles/main.css">
+    <link rel="shortcut icon" href="/websites-test/favicon.ico" type="image/x-icon">
+    <title>Marcin Bańkosz - &#128248; Fotografia | &#127916; Film</title>
+</head>
+<body>
+    <div id="overlay">
+        <div class="loading">
+            <img src="/websites-test/images/loading.gif" alt="Loading gif" />
+        </div>
+    </div>
+    <script src="/websites-test/scripts/loading.js" type="text/javascript"></script>
+    <nav>
+        <div class="nav">
+            <div class="nav-side">
+                <div class="nav-side_links">
+                    <div class="nav-side_links_item active">
+                        <a href="/websites-test/">HOME</a>
+                    </div>
+                    <div class="nav-side_links_item">
+                        <a href="/websites-test/aboutMe">O MNIE</a>
+                    </div>
+                    <div class="nav-side_links_item">
+                        <a href="/websites-test/gallery">GALERIA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-center">
+                <div class="nav-center_logo">
+                    <img src="/websites-test/images/logo-white.png" alt="Marcin Bańkosz - Fotografia i Film " />
+                </div>
+            </div>
+            <div class="nav-side">
+                <div class="nav-side_links">
+                    <div class="nav-side_links_item">
+                        <a href="/websites-test/offer">OFERTA</a>
+                    </div>
+                    <div class="nav-side_links_item">
+                        <a href="/websites-test/portfolio">PORTFOLIO</a>
+                    </div>
+                    <div class="nav-side_links_item">
+                        <a href="/websites-test/contact">KONTAKT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="main-background"></div>
+        <div class="main-top">
+            <div class="text-center">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="text-center_arrow-left">
+                    <i class="bi bi-chevron-left" onclick="changePhotoByOne('-')"></i>
+                </div>
+                <div class="text-center_arrow-right">
+                    <i class="bi bi-chevron-right" onclick="changePhotoByOne('+')"></i>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <div class="slider-dots_item dot_1 active" onclick="changePhoto(1)"></div>
+                <div class="slider-dots_item dot_2" onclick="changePhoto(2)"></div>
+                <div class="slider-dots_item dot_3" onclick="changePhoto(3)"></div>
+                <div class="slider-dots_item dot_4" onclick="changePhoto(4)"></div>
+                <div class="slider-dots_item dot_5" onclick="changePhoto(5)"></div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="main-content_field">
+                <div class="main-content_field_photo">
+                    <img src="/websites-test/images/me.jpg" alt="">
+                </div>
+                <div class="main-content_field_text">
+                    <h2>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, odit natus dolorum perspiciatis excepturi nam officia placeat laudantium ex similique?
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem quaerat ab laboriosam atque, maiores sequi recusandae molestiae excepturi! Quis, id! Sapiente, quaerat amet doloremque assumenda quam asperiores fuga, velit quis placeat perspiciatis blanditiis ex, hic nesciunt odio veritatis voluptatum voluptatem facere perferendis quod vel ullam inventore rem vitae. Totam, ullam?
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur beatae perspiciatis a nam aliquid, quis aperiam vero dolores porro ipsum cum temporibus fuga illo necessitatibus odio officiis ab veritatis quo quod error delectus. Tenetur quod nobis fuga nihil rem aspernatur possimus officia qui, perferendis voluptatem? Tenetur rerum culpa praesentium quibusdam doloremque minima ratione accusamus laudantium ducimus obcaecati expedita cum vitae error quaerat commodi odit nesciunt perspiciatis corporis non in quidem dolorum, tempore distinctio voluptates? Ullam, inventore ipsum delectus molestias magni accusantium doloribus! Beatae delectus, quas voluptatibus illo reiciendis repellat rerum.
+                    </p>
+                </div>
+            </div>
+            <div class="main-content_link">
+                <div class="main-content_link_photo">
+                    <a href="/websites-test/aboutMe">Poznajmy się!</a>
+                </div>
+            </div>
+            <div class="main-content_title">
+                <h2>Co oferuje?</h2>
+            </div>
+            <div class="main-content_offers">
+                <div class="main-content_offers_list">
+                    <div class="main-content_offers_list_item">
+                        <div class="main-content_offers_list_item_title">
+                            Forografia
+                        </div>
+                        <div class="main-content_offers_list_item_icon">
+                            <img src="https://img.icons8.com/clouds/200/000000/stack-of-photos.png"/>
+                        </div>
+                    </div>
+                    <div class="main-content_offers_list_item">
+                        <div class="main-content_offers_list_item_title">
+                            Film
+                        </div>
+                        <div class="main-content_offers_list_item_icon">
+                            <img src="https://img.icons8.com/clouds/200/000000/camcorder-pro.png"/>
+                        </div>
+                    </div>
+                    <div class="main-content_offers_list_item">
+                        <div class="main-content_offers_list_item_title">
+                            Fotografia i film
+                        </div>
+                        <div class="main-content_offers_list_item_icon">
+                            <img src="https://img.icons8.com/clouds/200/000000/instant-camera.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="imageHolder" style="visibility: hidden;">
+        <div style="background: url('/websites-test/images/photo-1.jpg');"></div>
+        <div style="background: url('/websites-test/images/photo-2.jpg');"></div>
+        <div style="background: url('/websites-test/images/photo-3.jpg');"></div>
+        <div style="background: url('/websites-test/images/photo-4.jpg');"></div>
+        <div style="background: url('/websites-test/images/photo-5.jpg');"></div>
+    </div>
+    <div class="footer">
+        <div class="footer-info">
+            <div class="footer-info_logo">
+                <img src="/websites-test/images/logo-white.png" alt="">
+            </div>
+            <div class="footer-info_name">
+                <h2>Marcin Bańkosz - Fotografia | Film</h2>
+            </div>
+            <div class="footer-info_links">
+                <div class="footer-info_links_item">
+                    <a href="/websites-offer/gallery">
+                        GALERIA
+                    </a>
+                </div>
+                <div class="footer-info_links_item">
+                    <a href="/websites-test/offer">
+                        OFERTA
+                    </a>
+                </div>
+                <div class="footer-info_links_item">
+                    <a href="/websites-test/contact">
+                        KONTAKT
+                    </a>
+                </div>
+            </div>
+            <div class="footer-info_contact">
+                <div class="footer-info_contact_item">
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </div>
+                <div class="footer-info_contact_item">
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom_item">
+                &reg; 2021 Marcin Bańkosz - Fotografia | Film - All Rights Reserved.
+            </div>
+            <div class="footer-bottom_item">
+                Created with love by <a href="https://www.danielsweb.pl/">DanielsWeb</a>
+            </div>
+        </div>
+    </div>
+    <script src="/websites-test/scripts/main.js" type="text/javascript"></script>
+</body>
+</html>

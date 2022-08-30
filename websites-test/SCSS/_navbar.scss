@@ -1,0 +1,74 @@
+.nav {
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    @include flex(row nowrap, center, center);
+
+    &-side {
+        width: 43%;
+        height: 10vh;
+        background-color: rgba(20, 20, 20, 0.2);
+        @include trans(0.3s);
+
+        &_links {
+            width: 100%;
+            height: inherit;
+            @include flex(row nowrap, center, center);
+
+            &_item {
+                width: 33.33%;
+                height: inherit;
+                text-align: center;
+                @include flex(column wrap, center, center);
+
+                a {
+                    text-decoration: none;
+                    color: rgb(255, 255, 255);
+                    font-family: $font-nav;
+                    font-size: 30px;
+                    opacity: 0.4;
+                    border-bottom: 2px solid transparent;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                &.active {
+
+                    a {
+                        border-color:#fff;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            background-color: rgba(20, 20, 20, 0.5);
+        }
+    }
+
+    &-center {
+        width: 14%;
+        height: 150%;
+        background-color: rgba(20, 20, 20, 0.8);
+        @include trans(0.3s);
+
+        &_logo {
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+
+            img {
+                width: 80%;
+                height: auto;
+                margin: 2% 10%;
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+@import 'config', 'navbar';
+
+.gallery {
+
+    &-top {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        @include bg-linear(linear-gradient(to bottom, rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.1)), url('/websites-test/images/gallery.jpg') top);
+    }
+
+    &-content {
+        width: 100vw;
+        height: 100vh;
+
+        &_title {
+            width: 100vw;
+            height: fit-content;
+            margin-bottom: 10vh;
+            background-color: rgb(242, 242, 242);
+            text-align: center;
+
+            &_top {
+                padding: 5vh 30vw;
+
+                p {
+                    font-family: $font-title;
+                    font-size: 24px;
+                    color: #000
+                }
+            }
+
+            &_text {
+                padding: 0 35vw 5vh 35vw;
+
+                p {
+                    font-family: $font-main;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &_list {
+            @include flex(row wrap, center, center);
+
+            &_item {
+                width: 40vw;
+                height: auto;
+                margin: 2vw;
+
+                &_photo {
+                    position: relative;
+                    width: inherit;
+                    height: inherit;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    &_desc {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        color: #fff;
+                        background-color: rgba(20, 20, 20, 0.8);
+                        @include trans(0.5s);
+
+                        &_name {
+                            width: 100%;
+                            height: 45%;
+                            padding: 3%;
+                            text-align: start;
+
+                            p {
+                                font-family: $font-title;
+                                font-size: 20px;
+                            }
+                        }
+
+                        &_button {
+                            @extend .gallery-content_list_item_photo_desc_name;
+                            text-align: center;
+
+                            a {
+                                text-decoration: none;
+                                margin: 0 auto;
+                                padding: 1.5% 10%;
+                                font-family: $font-nav;
+                                font-size: 30px;
+                                border: 1px solid transparent;
+                                color: #fff;
+
+                                &:hover {
+                                    cursor: pointer;
+                                    border-color: #fff;
+                                }
+                            }
+                        }
+
+                        &_date {
+                            position: absolute;
+                            bottom: 2%;
+                            right: 2%;
+
+                            p {
+                                font-family: $font-top;
+                                font-size: 30px;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .gallery-content_list_item_photo_desc {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_contact {
+            width: 100vw;
+            height: fit-content;
+            text-align: center;
+            margin: 10vh 0;
+            background-color: rgb(242, 242, 242);
+
+            &_text {
+                width: 50%;
+                margin: 0 auto;
+
+                h2 {
+                    font-family: $font-title;
+                    font-size: 24px;
+                    font-weight: 400;
+                    padding: 5vh 0;
+                }
+
+                p {
+                    font-family: $font-main;
+                    font-size: 14px;
+                }
+            }
+
+            &_link {
+                padding: 5vh 0;
+
+                a {
+                    font-family: $font-nav;
+                    font-size: 40px;
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+        }
+    }
+}

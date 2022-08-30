@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -132,53 +133,10 @@ body {
 
 #overlay #progress {
   height: 3px;
-  background: #ff5a00;
+  background: #ff7800;
   position: absolute;
   width: 0;
   top: 50%;
-}
-
-.nav {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  right: 0;
-  width: 50vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.nav-item, .side-nav_item {
-  position: relative;
-  padding: 2vw;
-}
-
-.nav-item a, .side-nav_item a {
-  color: #c8c8c8;
-  text-decoration: none;
-  font-size: 1.2vw;
-  font-family: "Fredericka the Great", cursive;
-  border-bottom: 1px solid transparent;
-  -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.nav-item a:hover, .side-nav_item a:hover {
-  color: white;
-  border-bottom: 1px solid #ffc800;
 }
 
 .side-nav {
@@ -191,6 +149,26 @@ body {
           transform: translateX(-100%);
   -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.side-nav_item {
+  position: relative;
+  padding: 2vw;
+}
+
+.side-nav_item a {
+  color: #c8c8c8;
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-family: "Fredericka the Great", cursive;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.side-nav_item a:hover {
+  color: white;
+  border-bottom: 1px solid #ffc800;
 }
 
 .side-nav_btn {
@@ -264,12 +242,41 @@ body {
   font-family: "Prata", sans-serif;
   letter-spacing: 4px;
   text-transform: capitalize;
-  font-size: 50px;
+  font-weight: normal;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#top .top .main-text .part_1 {
+  font-size: 50px;
+}
+
+#top .top .main-text .part_2 {
+  font-size: 30px;
+}
+
+#top .top .main-text .part_3 {
+  font-size: 70px;
+}
+
+#top .top .main-text .part_1, #top .top .main-text .part_2, #top .top .main-text .part_3 {
+  width: 100%;
   opacity: 0;
 }
 
-#top .top .main-text.show {
+#top .top .main-text .part_1.show, #top .top .main-text .part_2.show, #top .top .main-text .part_3.show {
   -webkit-animation: focus-in 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
           animation: focus-in 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
@@ -373,7 +380,7 @@ body {
   right: -10%;
   width: 100%;
   height: 100%;
-  border: 10px solid transparent;
+  border: 20px solid transparent;
   -o-border-image: linear-gradient(to bottom right, #140a64, #9632c8);
      border-image: -webkit-gradient(linear, left top, right bottom, from(#140a64), to(#9632c8));
      border-image: linear-gradient(to bottom right, #140a64, #9632c8);
@@ -410,6 +417,7 @@ body {
 }
 
 .portfolio .list-item_info {
+  position: relative;
   width: 50vw;
   height: 50vh;
   padding: 2vh 2vw;
@@ -422,8 +430,8 @@ body {
 
 .portfolio .list-item_info_title {
   text-align: center;
-  font-family: "Prata", sans-serif;
-  font-size: 30px;
+  font-family: "Libre Baskerville", sans-serif;
+  font-size: 40px;
   padding: 2vh 0;
 }
 
@@ -436,7 +444,10 @@ body {
 }
 
 .portfolio .list-item_info_links {
-  padding-top: 4vh;
+  position: absolute;
+  top: 75%;
+  left: 10%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -444,9 +455,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -454,31 +465,28 @@ body {
 
 .portfolio .list-item_info_links a {
   text-decoration: none;
-}
-
-.portfolio .list-item_info_links a h2 {
   color: #c8c8c8;
-  font-family: "Prata", sans-serif;
+  font-family: "Libre Baskerville", sans-serif;
   font-size: 30px;
   letter-spacing: 3px;
+  -webkit-transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.portfolio .list-item_info_links a h2:hover {
+.portfolio .list-item_info_links a:hover {
   color: white;
-  border-bottom: 1px solid #ffc800;
   cursor: pointer;
 }
 
-.portfolio .list-item_info_links a h1 {
+.portfolio .list-item_info_links a span {
   font-size: 60px;
-  color: white;
+  color: #c8c8c8;
   -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.portfolio .list-item_info_links a h1:hover {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+.portfolio .list-item_info_links a span:hover {
+  color: white;
 }
 
 .portfolio .list-item:hover .list-item_info {
@@ -527,7 +535,7 @@ body {
   text-align: center;
 }
 
-.skills-main_title h1, .skills-second_list_title h1 {
+.skills-main_title h3, .skills-second_list_title h3 {
   font-family: "Prata", sans-serif;
   padding: 2vh 0;
 }
@@ -621,7 +629,7 @@ body {
   left: -10%;
   width: 100%;
   height: 100%;
-  border: 10px solid transparent;
+  border: 20px solid transparent;
   -o-border-image: linear-gradient(to bottom left, #140a64, #9632c8);
      border-image: -webkit-gradient(linear, right top, left bottom, from(#140a64), to(#9632c8));
      border-image: linear-gradient(to bottom left, #140a64, #9632c8);
@@ -629,7 +637,7 @@ body {
 }
 
 .skills-second_list {
-  width: 50vw;
+  width: 70vw;
   margin: 0 2vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -734,10 +742,10 @@ footer .upper .list-contact_text, footer .upper .list-links_text {
   width: fit-content;
   margin: 0 auto;
   padding: 1vh 5vw;
-  border-bottom: 1px solid #ff5a00;
+  border-bottom: 1px solid #ff7800;
 }
 
-footer .upper .list-contact_text h1, footer .upper .list-links_text h1 {
+footer .upper .list-contact_text h2, footer .upper .list-links_text h2 {
   font-size: 60px;
   font-family: "Cairo", sans-serif;
   letter-spacing: 3px;
@@ -761,7 +769,7 @@ footer .upper .list-contact_items {
           align-items: center;
 }
 
-footer .upper .list-contact_items h1 {
+footer .upper .list-contact_items span {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -778,29 +786,29 @@ footer .upper .list-contact_items h1 {
           align-items: center;
 }
 
-footer .upper .list-contact_items h1 i {
+footer .upper .list-contact_items span i {
   color: white;
   font-size: 80px;
   -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-footer .upper .list-contact_items h1 p {
+footer .upper .list-contact_items span p {
   font-size: 20px;
   margin-top: 2vh;
   color: white;
-  font-family: "Prata", sans-serif;
+  font-family: "Libre Baskerville", sans-serif;
   -webkit-transform: translateY(-40%) rotateX(-90deg);
           transform: translateY(-40%) rotateX(-90deg);
   -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-footer .upper .list-contact_items h1:hover i {
-  color: #ff5a00;
+footer .upper .list-contact_items span:hover i {
+  color: #ff7800;
 }
 
-footer .upper .list-contact_items h1:hover p {
+footer .upper .list-contact_items span:hover p {
   -webkit-transform: translateY(0) rotateX(0);
           transform: translateY(0) rotateX(0);
 }
@@ -840,15 +848,15 @@ footer .upper .list-links_items {
           align-items: center;
 }
 
-footer .upper .list-links_items h1 a i {
+footer .upper .list-links_items span a i {
   color: white;
   font-size: 100px;
   -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-footer .upper .list-links_items h1 a i:hover {
-  color: #ff5a00;
+footer .upper .list-links_items span a i:hover {
+  color: #ff7800;
 }
 
 footer .lower {
@@ -891,7 +899,7 @@ footer .lower p a:hover {
   font-family: "Cairo", sans-serif;
 }
 
-.title h1 {
+.title h2 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -901,14 +909,18 @@ footer .lower p a:hover {
   border-bottom: 1px solid #323c5a;
 }
 
-.title h6 {
+.title h3 {
   font-size: 16px;
 }
 
 .question {
   width: 100vw;
   height: 30vh;
-  background-color: #141414;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(122, 78, 78, 0.3)), to(rgba(20, 20, 20, 0.9))), url("/images/code.jpg") center;
+  background: linear-gradient(to right, rgba(122, 78, 78, 0.3), rgba(20, 20, 20, 0.9)), url("/images/code.jpg") center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   -webkit-box-shadow: 0 10px 10px rgba(20, 20, 20, 0.9), 10px 0 10px rgba(20, 20, 20, 0.9);
           box-shadow: 0 10px 10px rgba(20, 20, 20, 0.9), 10px 0 10px rgba(20, 20, 20, 0.9);
   text-align: center;
@@ -931,7 +943,7 @@ footer .lower p a:hover {
 
 .question-texts_items .first {
   padding: 2vh 2vw;
-  border: 2px solid #ff5a00;
+  border: 2px solid #ff7800;
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -941,7 +953,7 @@ footer .lower p a:hover {
   color: white;
   font-size: 20px;
   padding: 12px;
-  font-family: "Prata", sans-serif;
+  font-family: "Libre Baskerville", sans-serif;
   -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -970,7 +982,7 @@ footer .lower p a:hover {
 }
 
 .question-texts_items:hover .first {
-  background-color: #ff5a00;
+  background-color: #ff7800;
 }
 
 .question-texts_items:hover .first .first-text, .question-texts_items:hover .first .second-text {
@@ -1017,15 +1029,16 @@ footer .lower p a:hover {
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.side-links_list_item h1 {
+.side-links_list_item span {
   position: relative;
   z-index: 10;
   font-size: 1.5vw;
   padding: 2vh 1vw;
   color: white;
+  display: block;
 }
 
-.side-links_list_item h1 p i, .side-links_list_item h1 a i {
+.side-links_list_item span p i, .side-links_list_item span a i {
   position: relative;
   z-index: 10;
   opacity: 0.6;
@@ -1034,12 +1047,12 @@ footer .lower p a:hover {
   transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.side-links_list_item h1 p i:hover, .side-links_list_item h1 a i:hover {
+.side-links_list_item span p i:hover, .side-links_list_item span a i:hover {
   cursor: pointer;
   opacity: 1;
 }
 
-.side-links_list_item h1 .more-info {
+.side-links_list_item span .more-info {
   position: absolute;
   z-index: 9;
   top: 20%;
@@ -1055,10 +1068,10 @@ footer .lower p a:hover {
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   font-size: 16px;
   color: white;
-  font-family: "Prata", sans-serif;
+  font-family: "Libre Baskerville", sans-serif;
 }
 
-.side-links_list_item h1:hover .more-info {
+.side-links_list_item span:hover .more-info {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   opacity: 1;
@@ -1074,7 +1087,7 @@ footer .lower p a:hover {
 }
 
 .colored {
-  color: #ff5a00;
+  color: #ff7800;
 }
 
 @media screen and (max-width: 1601px) {
@@ -1090,22 +1103,22 @@ footer .lower p a:hover {
   .aboutMe .text-about p {
     font-size: 16px;
   }
-  footer .upper .list-contact_text h1, footer .upper .list-links_text h1 {
+  footer .upper .list-contact_text h2, footer .upper .list-links_text h2 {
     font-size: 40px;
   }
-  footer .upper .list-contact_items h1 i {
+  footer .upper .list-contact_items span i {
     font-size: 80px;
   }
-  footer .upper .list-contact_items h1 a {
+  footer .upper .list-contact_items span a {
     font-size: 24px;
   }
-  footer .upper .list-links_items h1 a i {
+  footer .upper .list-links_items span a i {
     font-size: 80px;
   }
 }
 
 @media screen and (max-width: 1337px) {
-  .title h1 {
+  .title h2 {
     font-size: 60px;
   }
   .aboutMe .text-name {
@@ -1117,13 +1130,13 @@ footer .lower p a:hover {
   .aboutMe .text-about p {
     font-size: 14px;
   }
-  footer .upper .list-contact_items h1 i {
+  footer .upper .list-contact_items span i {
     font-size: 60px;
   }
-  footer .upper .list-contact_items h1 a {
+  footer .upper .list-contact_items span a {
     font-size: 14px;
   }
-  footer .upper .list-links_items h1 a i {
+  footer .upper .list-links_items span a i {
     font-size: 60px;
   }
 }
@@ -1159,31 +1172,31 @@ footer .lower p a:hover {
   .portfolio .list-item_info_description p {
     font-size: 14px;
   }
-  .portfolio .list-item_info_links a h2 {
+  .portfolio .list-item_info_links a span {
     font-size: 24px;
   }
-  .portfolio .list-item_info_links a h1 {
+  .portfolio .list-item_info_links a span {
     font-size: 40px;
   }
-  footer .upper .list-contact_text h1, footer .upper .list-links_text h1 {
+  footer .upper .list-contact_text h2, footer .upper .list-links_text h2 {
     font-size: 20px;
   }
-  footer .upper .list-contact_items h1 i {
+  footer .upper .list-contact_items span i {
     font-size: 40px;
   }
-  footer .upper .list-contact_items h1 a {
+  footer .upper .list-contact_items span a {
     font-size: 14px;
   }
-  footer .upper .list-links_items h1 a i {
+  footer .upper .list-links_items span a i {
     font-size: 40px;
   }
 }
 
 @media screen and (max-width: 1025px) {
-  .title h1 {
+  .title h2 {
     font-size: 40px;
   }
-  .title h6 {
+  .title h3 {
     font-size: 16px;
   }
   #top .top .main-text {
@@ -1228,10 +1241,10 @@ footer .lower p a:hover {
   .portfolio .list-item_info_description p {
     font-size: 14px;
   }
-  .portfolio .list-item_info_links a h2 {
+  .portfolio .list-item_info_links a span {
     font-size: 24px;
   }
-  .portfolio .list-item_info_links a h1 {
+  .portfolio .list-item_info_links a span {
     font-size: 40px;
   }
 }
@@ -1240,13 +1253,13 @@ footer .lower p a:hover {
   .skills .skills-second .skills-second_list .skills-second_list_item .skills-second_list_item_img img.img-big {
     width: 24vw;
   }
-  footer .upper .list-contact_items h1 i {
+  footer .upper .list-contact_items span i {
     font-size: 60px;
   }
-  footer .upper .list-contact_items h1 a {
+  footer .upper .list-contact_items span a {
     font-size: 16px;
   }
-  footer .upper .list-links_items h1 a i {
+  footer .upper .list-links_items span a i {
     font-size: 60px;
   }
 }
@@ -1274,17 +1287,20 @@ footer .lower p a:hover {
   }
   #top .top .main-text {
     font-size: 20px;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
     -webkit-transition: all 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
     transition: all 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-  #top .top .main-text.show {
-    -webkit-animation: none;
-            animation: none;
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    opacity: 1;
+  #top .top .main-text .part_1 {
+    font-size: 30px;
+  }
+  #top .top .main-text .part_2 {
+    font-size: 16px;
+  }
+  #top .top .main-text .part_3 {
+    font-size: 40px;
+  }
+  #top .top .main-text span {
+    padding-bottom: 1vh;
   }
   .side-links {
     width: 100vw;
@@ -1310,21 +1326,21 @@ footer .lower p a:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  .side-links_list_item h1 {
+  .side-links_list_item span {
     font-size: 24px;
   }
-  .side-links_list_item h1 .more-info {
+  .side-links_list_item span .more-info {
     display: none;
   }
   .side-links .show .side-links_list {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  .title h1 {
-    width: 90vw;
-    font-size: 60px;
+  .title h2 {
+    width: 95vw;
+    font-size: 56px;
   }
-  .title h6 {
+  .title h3 {
     width: 70vw;
     margin: 0 auto;
     font-size: 12px;
@@ -1356,6 +1372,9 @@ footer .lower p a:hover {
   .aboutMe .image {
     width: 60vw;
   }
+  .aboutMe .image-bg {
+    border-width: 10px;
+  }
   .question {
     width: 100vw;
     height: 30vh;
@@ -1379,16 +1398,13 @@ footer .lower p a:hover {
     opacity: 0.8;
   }
   .portfolio .list-item_info_title {
-    font-size: 20px;
+    font-size: 28px;
   }
   .portfolio .list-item_info_description {
     font-size: 10px;
   }
-  .portfolio .list-item_info_links a h2 {
-    font-size: 16px;
-  }
-  .portfolio .list-item_info_links a h1 {
-    font-size: 24px;
+  .portfolio .list-item_info_links a span {
+    font-size: 40px;
   }
   .skills-main {
     display: -webkit-box;
@@ -1464,7 +1480,7 @@ footer .lower p a:hover {
   footer .upper .list-contact_text, footer .upper .list-links_text {
     padding: 1vh 0;
   }
-  footer .upper .list-contact_text h1, footer .upper .list-links_text h1 {
+  footer .upper .list-contact_text h2, footer .upper .list-links_text h2 {
     font-size: 24px;
   }
   footer .upper .list-contact_items {
@@ -1483,25 +1499,41 @@ footer .lower p a:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  footer .upper .list-contact_items h1 {
+  footer .upper .list-contact_items span {
     width: 100%;
     padding-bottom: 2vh;
   }
-  footer .upper .list-contact_items h1 i {
+  footer .upper .list-contact_items span i {
     font-size: 30px;
   }
-  footer .upper .list-contact_items h1 a {
+  footer .upper .list-contact_items span a {
     font-size: 16px;
   }
   footer .upper .list-links_items {
     width: 80%;
     padding: 10vh 0;
   }
-  footer .upper .list-links_items h1 a i {
+  footer .upper .list-links_items span a i {
     font-size: 40px;
+  }
+  footer .lower {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   footer .lower p {
     padding: 1vh 0;
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=main.css.map */
