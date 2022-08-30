@@ -1,0 +1,253 @@
+// Bootstrap Icons
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$font-nav: 'Alumni Sans', sans-serif;
+$font-top: 'Parisienne', cursive;
+$font-title: 'Libre Baskerville', serif;
+$font-main: 'Open Sans', sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    h2 {
+        font-family: $font-title;
+        font-weight: 400;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    main {
+        height: max-content;
+    }
+}
+
+body {
+    max-width: 100vw;
+}
+
+// --------------------------- MIXINS ------------------------------
+
+@mixin flex($flow, $justify, $align) {
+    display: flex;
+    flex-flow: $flow;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin trans($sec) {
+    transition: all $sec ease-in-out;    
+}
+
+@mixin bg($link) {
+    background: $link;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin bg-linear($linear, $link) {
+    background: $linear, $link;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// --------------------------- KEYFRAMES ------------------------------
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#overlay {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    @include flex(row, center, center);
+    @include trans(0.5s);
+
+    .loading img {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        bottom: 5%;
+        right: 5%;
+    }
+}
+
+.text-center {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 10vh;
+    top: 45vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    @include trans(1s);
+
+    p {
+        font-family: $font-top;
+        font-size: 70px;
+        color: #fff;
+    }
+
+    &.blur {
+        filter: blur(10px);
+        letter-spacing: -10px;
+        opacity: 0;
+    }
+}
+
+.scroll {
+    position: absolute;
+    width: 100%;
+    height: 5vh;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+
+    &-info {
+        font-family: $font-nav;
+        font-size: 16px;
+    }
+    
+    &-icon {
+        font-size: 24px;
+    }
+}
+
+.frame-bottom_right {
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 5vw;
+    height: 10vh;
+    border-bottom: 3px solid rgb(150, 150, 150);
+    border-right: 3px solid rgb(150, 150, 150);
+}
+
+.frame-top_left {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 5vw;
+    height: 10vh;
+    border-top: 3px solid rgb(150, 150, 150);
+    border-left: 3px solid rgb(150, 150, 150);
+}
+
+.footer-show {
+    width: 100vw;
+    height: 80vh;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    background-color: rgb(20, 22, 24);
+
+    &-info {
+        width: 75%;
+        height: auto;
+        margin: 0 auto;
+        @include flex(column wrap, center, center);
+
+        &_logo {
+            width: 30%;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &_name {
+            width: 70%;
+            border-bottom: 3px solid rgb(242, 242, 242);
+            text-align: center;
+
+            h2 {
+                font-family: $font-title;
+                color: #fff;
+                font-weight: 400;
+                font-size: 40px;
+            }
+        }
+
+        &_links {
+            width: 50%;
+            @include flex(row wrap, space-evenly, center);
+
+            &_item {
+
+                a {
+                    font-family: $font-nav;
+                    font-size: 30px;
+                    color: #fff;
+                    border-bottom: 1px solid transparent;
+
+                    &:hover {
+                        border-color: #fff;
+                    }
+                }
+            }
+        }
+
+        &_contact {
+            width: 40%;
+            padding: 5vh 0 25vh 0;
+            @include flex(row wrap, space-evenly, center);
+
+            &_item a {
+                font-size: 80px;
+                color: rgb(230, 230, 230);
+                border-bottom: 2px solid transparent;
+
+                &:hover {
+                    border-color: #fff;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        color: #fff;
+        font-family: $font-main;
+        @include flex(column wrap, center, center);
+
+        &_item {
+            padding: 1vh 0;
+            font-size: 12px;
+
+            a {
+                color: rgb(210, 210, 210);
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

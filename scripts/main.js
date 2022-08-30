@@ -1,47 +1,140 @@
-function getID(x) {
-    return document.getElementById(x);
-}
-function getQuery(x) {
-    return document.querySelector(x);
-}
-function getQueryAll(x) {
-    return document.querySelectorAll(x);
-}
-var topEl = getID('top'), topText = getID('top-text'), aboutMe = getID('aboutMe'), nav = getQuery('.nav'), navSide = getQuery('.side-nav'), navSideBtn = getQuery('.side-nav_btn_abs'), footer = getQuery('.upper'), sideLinks = getQuery('.side-links'), navSideLinks = getQueryAll('.side-nav_item');
-function onScroll() {
-    var win = window.pageYOffset;
-    if (aboutMe.offsetTop !== null && win > aboutMe.offsetTop) {
-        navSide.classList.add('active');
-        topText.classList.remove('show');
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var Main = /** @class */ (function () {
+    function Main() {
+        this.TopEl = new Doc("#top");
+        this.NavSide = new Doc(".side-nav");
+        this.AboutMe = new Doc("#aboutMe");
+        this.SideLinks = new Doc(".side-links");
+        this.Footer = new Doc(".upper");
+        this.Nav = new Doc(".nav");
+        this.NavSideBtn = new Doc(".side-nav_btn_abs");
+        this.NavSideLinks = new Docs(".side-nav_item");
+        this.TopTexts = new Docs(".--separated");
     }
-    else if (win <= nav.offsetTop) {
-        topText.classList.add('show');
+    Main.prototype.StartWebsiteScript = function () {
+        new Events().CreateAllEvents();
+    };
+    return Main;
+}());
+var Doc = /** @class */ (function () {
+    function Doc(ElementName) {
+        this.Element = document.querySelector(ElementName);
     }
-    else {
-        navSide.classList.remove('active');
-        navSide.classList.remove('show');
+    Doc.prototype.SetAsActive = function () {
+        this.Element.classList.add("active");
+    };
+    Doc.prototype.SetAsInactive = function () {
+        this.Element.classList.remove("active");
+    };
+    Doc.prototype.ShowElement = function () {
+        this.Element.classList.add("show");
+    };
+    Doc.prototype.HideElement = function () {
+        this.Element.classList.remove("show");
+    };
+    Doc.prototype.OffsetTop = function () {
+        return this.Element.offsetTop;
+    };
+    Doc.prototype.Contains = function (ClassName) {
+        return this.Element.classList.contains(ClassName);
+    };
+    Doc.prototype.AddEvent = function (Type, Callback) {
+        this.Element.addEventListener(Type, Callback);
+    };
+    return Doc;
+}());
+var Docs = /** @class */ (function () {
+    function Docs(ElementsName) {
+        this.Elements = document.querySelectorAll(ElementsName);
     }
-    if (win >= footer.offsetTop) {
-        sideLinks.classList.remove('show');
+    Docs.prototype.AddEvent = function (Type, Callback) {
+        this.Elements.forEach(function (item) {
+            item.addEventListener(Type, Callback);
+        });
+    };
+    Docs.prototype.ShowElementsWithDelay = function () {
+        var timeout = 0;
+        this.Elements.forEach(function (item) {
+            setTimeout(function () {
+                item.classList.add("show");
+            }, timeout);
+            timeout += 500;
+        });
+    };
+    Docs.prototype.HideElements = function () {
+        this.Elements.forEach(function (item) {
+            item.classList.remove("show");
+        });
+    };
+    return Docs;
+}());
+var Scroll = /** @class */ (function (_super) {
+    __extends(Scroll, _super);
+    function Scroll() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    else if (win < footer.offsetTop) {
-        sideLinks.classList.add('show');
+    Scroll.prototype.OnScroll = function (Window) {
+        if (Window === void 0) { Window = window.pageYOffset; }
+        if (this.AboutMe.OffsetTop() !== null && this.AboutMe.OffsetTop() < Window) {
+            this.NavSide.SetAsActive();
+            this.TopTexts.HideElements();
+        }
+        else if (Window <= this.Nav.OffsetTop()) {
+            this.TopTexts.ShowElementsWithDelay();
+        }
+        else {
+            this.NavSide.SetAsInactive();
+            this.NavSide.HideElement();
+        }
+        if (Window >= this.Footer.OffsetTop()) {
+            this.SideLinks.HideElement();
+        }
+        else if (Window < this.Footer.OffsetTop()) {
+            this.SideLinks.ShowElement();
+        }
+    };
+    return Scroll;
+}(Main));
+var Events = /** @class */ (function (_super) {
+    __extends(Events, _super);
+    function Events() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.ScrollClass = new Scroll();
+        return _this;
     }
-}
-/* -------------------- EVENTS ---------------------------- */
-document.addEventListener('scroll', function () {
-    var value = -document.scrollingElement.scrollTop * 0.3;
-    topEl.style.backgroundPositionY = value + "px";
-});
-navSideBtn.addEventListener('click', function () {
-    if (navSide.classList.contains('show'))
-        navSide.classList.remove('show');
-    else
-        navSide.classList.add('show');
-});
-navSideLinks.forEach(function (item) {
-    item.addEventListener('click', function () {
-        navSide.classList.remove('show');
-    });
-});
-window.onscroll = function () { return onScroll(); };
+    Events.prototype.CreateAllEvents = function () {
+        var _this = this;
+        window.onscroll = function () { return _this.ScrollClass.OnScroll(window.pageYOffset); };
+        document.addEventListener('scroll', function () {
+            var value = -document.scrollingElement.scrollTop * 0.3;
+            _this.TopEl.Element.style.backgroundPositionY = value + "px";
+        });
+        this.NavSideBtn.AddEvent("click", function () {
+            if (_this.NavSide.Contains("show"))
+                _this.NavSide.HideElement();
+            else
+                _this.NavSide.ShowElement();
+        });
+        this.NavSideLinks.AddEvent("click", function () {
+            _this.NavSide.HideElement();
+        });
+    };
+    return Events;
+}(Main));
+// ================================= SCRIPT START =============================== //
+var main = new Main();
+main.StartWebsiteScript();
